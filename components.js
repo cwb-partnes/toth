@@ -39,19 +39,19 @@ class TothNavbar extends HTMLElement {
 
     this.innerHTML = `
         <!-- Top Bar -->
-        <div class="bg-toth-dark text-white text-xs py-2.5 px-4">
-            <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-                <div class="flex items-center flex-wrap gap-x-4 gap-y-1">
+        <div class="hidden lg:block bg-toth-dark text-white text-xs py-2.5 px-4">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-y-2 gap-x-4">
+                <div class="flex items-center justify-center md:justify-start flex-wrap gap-x-4 gap-y-1 text-center">
                     <a href="tel:4132055486" class="hover:text-toth-gold transition"><i class="fa fa-phone mr-1"></i>(41) 3205-5486</a>
                     <a href="https://wa.me/5541997127102" class="text-toth-gold font-medium hover:text-white transition"><i class="fa-brands fa-whatsapp mr-1"></i>(41) 99712-7102</a>
-                    <a href="mailto:atendimento@tothcorretoradeseguros.com.br" class="hover:text-toth-gold transition"><i class="fa fa-envelope mr-1"></i>atendimento@tothcorretoradeseguros.com.br</a>
+                    <a href="mailto:atendimento@tothcorretoradeseguros.com.br" class="hover:text-toth-gold transition w-full sm:w-auto mt-1 sm:mt-0"><i class="fa fa-envelope mr-1"></i>atendimento@tothcorretoradeseguros.com.br</a>
                 </div>
-                <div class="flex items-center gap-4 text-gray-400">
+                <div class="flex items-center justify-center flex-wrap gap-4 text-gray-400 mt-1 md:mt-0">
                     <span class="hidden sm:inline"><i class="fa fa-clock mr-1"></i>Seg à Sex - 8h às 18h</span>
                     <span class="hidden md:inline"><i class="fa fa-location-dot mr-1"></i>Curitiba, PR</span>
-                    <div class="flex gap-3 text-white ml-1">
-                        <a href="#" class="hover:text-toth-gold transition"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="hover:text-toth-gold transition"><i class="fa-brands fa-instagram"></i></a>
+                    <div class="flex gap-4 text-white">
+                        <a href="#" class="hover:text-toth-gold transition text-sm"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-toth-gold transition text-sm"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
             </div>

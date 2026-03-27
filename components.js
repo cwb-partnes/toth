@@ -72,11 +72,16 @@ class TothNavbar extends HTMLElement {
                                 Seguros e mais <i class="fa fa-chevron-down text-[10px] ml-1.5 mt-0.5"></i>
                             </button>
                             <div class="absolute top-full left-0 w-60 bg-white shadow-2xl border border-gray-100 rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                                <a href="${base}pages/seguro-de-pessoas.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Seguros de Pessoas</a>
-                                <a href="${base}pages/seguro-de-danos-patrimoniais.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Danos / Patrimoniais</a>
+                                <a href="${base}pages/seguro-auto.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Seguro Auto</a>
+                                <a href="${base}pages/seguro-residencial.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Seguro Residencial</a>
+                                <a href="${base}pages/seguro-equipamentos.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Seguro Equipamentos</a>
+                                <a href="${base}pages/seguro-empresarial.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Seguro Empresarial</a>
+                                <a href="${base}pages/seguro-de-pessoas.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Seguro de Pessoas</a>
+                                <a href="${base}pages/seguro-de-vida.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Seguro de Vida</a>
+                                <a href="${base}pages/seguro-de-danos-patrimoniais.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Danos Patrimoniais</a>
                                 <a href="${base}pages/responsabilidade-civil.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Responsabilidade Civil</a>
                                 <a href="${base}pages/consorcios.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Consórcios</a>
-                                <a href="${base}pages/planos-de-saude.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Planos de Saúde</a>
+                                <a href="${base}pages/plano-de-saude.php/index.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-toth-gold transition">Planos de Saúde</a>
                             </div>
                         </div>
                         ${link("parceiros")}
@@ -96,10 +101,16 @@ class TothNavbar extends HTMLElement {
                 <div class="flex flex-col space-y-3 pt-4">
                     <a href="${pages.home.href}" class="text-gray-700 font-medium py-2 border-b border-gray-100">Home</a>
                     <a href="${pages.sobre.href}" class="text-gray-700 font-medium py-2 border-b border-gray-100">Sobre</a>
-                    <a href="${base}pages/seguro-de-pessoas.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Seguros de Pessoas</a>
-                    <a href="${base}pages/seguro-de-danos-patrimoniais.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Danos / Patrimoniais</a>
+                    <a href="${base}pages/seguro-auto.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Seguro Auto</a>
+                    <a href="${base}pages/seguro-residencial.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Seguro Residencial</a>
+                    <a href="${base}pages/seguro-equipamentos.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Seguro Equipamentos</a>
+                    <a href="${base}pages/seguro-empresarial.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Seguro Empresarial</a>
+                    <a href="${base}pages/seguro-de-pessoas.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Seguro de Pessoas</a>
+                    <a href="${base}pages/seguro-de-vida.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Seguro de Vida</a>
+                    <a href="${base}pages/seguro-de-danos-patrimoniais.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Danos Patrimoniais</a>
+                    <a href="${base}pages/responsabilidade-civil.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Responsabilidade Civil</a>
                     <a href="${base}pages/consorcios.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Consórcios</a>
-                    <a href="${base}pages/planos-de-saude.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Planos de Saúde</a>
+                    <a href="${base}pages/plano-de-saude.php/index.html" class="text-gray-700 font-medium py-2 border-b border-gray-100">Planos de Saúde</a>
                     <a href="${pages.parceiros.href}" class="text-gray-700 font-medium py-2 border-b border-gray-100">Parceiros</a>
                     <a href="${pages.contato.href}" class="text-gray-700 font-medium py-2 border-b border-gray-100">Contato</a>
                     <a href="https://wa.me/5541997127102" class="btn-gold text-white px-5 py-3 rounded-full font-medium text-center">
@@ -187,3 +198,77 @@ document.head.appendChild(tothStyles);
 // Register custom elements
 customElements.define("toth-navbar", TothNavbar);
 customElements.define("toth-footer", TothFooter);
+
+// =============================================
+// TOTH SIDEBAR SERVICES COMPONENT
+// =============================================
+class TothSidebarServices extends HTMLElement {
+  connectedCallback() {
+    const active = this.getAttribute("active") || "";
+    const base = this.getAttribute("base") || "../../";
+
+    const services = [
+      { id: "seguro-auto", href: "seguro-auto.php", title: "Seguro Auto" },
+      {
+        id: "seguro-residencial",
+        href: "seguro-residencial.php",
+        title: "Seguro Residencial",
+      },
+      {
+        id: "seguro-equipamentos",
+        href: "seguro-equipamentos.php",
+        title: "Seguro Equipamentos",
+      },
+      {
+        id: "seguro-empresarial",
+        href: "seguro-empresarial.php",
+        title: "Seguro Empresarial",
+      },
+      {
+        id: "seguro-de-pessoas",
+        href: "seguro-de-pessoas.php",
+        title: "Seguro de Pessoas",
+      },
+      {
+        id: "seguro-de-vida",
+        href: "seguro-de-vida.php",
+        title: "Seguro de Vida",
+      },
+      {
+        id: "seguro-de-danos-patrimoniais",
+        href: "seguro-de-danos-patrimoniais.php",
+        title: "Danos Patrimoniais",
+      },
+      {
+        id: "responsabilidade-civil",
+        href: "responsabilidade-civil.php",
+        title: "Responsabilidade Civil",
+      },
+      { id: "consorcios", href: "consorcios.php", title: "Consórcios" },
+      {
+        id: "plano-de-saude",
+        href: "plano-de-saude.php",
+        title: "Plano de Saúde",
+      },
+    ];
+
+    const getLink = (item) => {
+      const isActive = active === item.id;
+      const cls = isActive ? "active" : "";
+      return `<a href="${base}pages/${item.href}/index.html" class="${cls}">${item.title}</a>`;
+    };
+
+    const linksHtml = services.map((s) => getLink(s)).join("");
+
+    this.innerHTML = `
+      <div class="bg-gray-50 border border-gray-100 rounded-2xl p-6">
+        <h3 class="font-bold text-gray-900 text-lg mb-4">
+          Outros Serviços
+        </h3>
+        <nav class="sidebar-nav space-y-1">
+          ${linksHtml}
+        </nav>
+      </div>`;
+  }
+}
+customElements.define("toth-sidebar-services", TothSidebarServices);

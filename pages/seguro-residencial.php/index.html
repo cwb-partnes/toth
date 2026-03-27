@@ -38,7 +38,17 @@
         font-family: "Inter", sans-serif;
       }
       .service-hero {
-        background: linear-gradient(rgba(4, 4, 4, 0.7), rgba(4, 4, 4, 0.8));
+        background:
+          linear-gradient(
+            135deg,
+            rgba(4, 4, 4, 0.6) 0%,
+            rgba(26, 26, 26, 0.6) 60%,
+            rgba(4, 4, 4, 0.6) 100%
+          ),
+          url("../../images/hero_residencial_bg.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         position: relative;
       }
       .sidebar-nav a {
@@ -215,7 +225,10 @@
           <!-- SIDEBAR -->
           <aside class="w-full lg:w-1/4">
             <div class="sticky top-28 space-y-8">
-              <toth-sidebar-services active="seguro-residencial" base="../../"></toth-sidebar-services>
+              <toth-sidebar-services
+                active="seguro-residencial"
+                base="../../"
+              ></toth-sidebar-services>
               <!-- Cotação -->
               <div
                 class="bg-toth-dark rounded-2xl p-6 text-white text-center sm:text-left"

@@ -41,8 +41,16 @@
       /* -------- PAGE HERO -------- */
       .service-hero {
         background:
-          linear-gradient(rgba(4, 4, 4, 0.7), rgba(4, 4, 4, 0.8)),
-          url("../../images/bg-seguro-auto.jpg") center/cover no-repeat;
+          linear-gradient(
+            135deg,
+            rgba(4, 4, 4, 0.6) 0%,
+            rgba(26, 26, 26, 0.6) 60%,
+            rgba(4, 4, 4, 0.6) 100%
+          ),
+          url("../../images/hero_auto_bg.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         position: relative;
       }
 
@@ -228,7 +236,10 @@
           <aside class="w-full lg:w-1/4">
             <div class="sticky top-28 space-y-8">
               <!-- Menu de Serviços -->
-              <toth-sidebar-services active="seguro-auto" base="../../"></toth-sidebar-services>
+              <toth-sidebar-services
+                active="seguro-auto"
+                base="../../"
+              ></toth-sidebar-services>
 
               <!-- Cotação Rápida Widget -->
               <div
@@ -347,6 +358,42 @@
                   Comparação entre as principais seguradoras para garantir o
                   melhor valor, sem abrir mão da qualidade da cobertura.
                 </p>
+              </div>
+            </div>
+
+            <!-- ====== PARTNER LOGOS ====== -->
+            <div class="mt-16 mb-16 border-t border-b border-gray-100 py-10">
+              <p
+                class="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8"
+              >
+                Trabalhamos com as Maiores Seguradoras
+              </p>
+              <div
+                class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 flex-row opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500"
+              >
+                <span class="text-2xl font-black text-[#003781] tracking-tight"
+                  >Allianz <i class="fa-solid fa-lines-leaning text-lg ml-1"></i
+                ></span>
+                <span
+                  class="text-2xl font-black text-[#e8001e] tracking-tighter italic"
+                  >TOKIO MARINE</span
+                >
+                <span
+                  class="text-2xl font-extrabold text-[#cc092f] tracking-tight"
+                  >Bradesco Seguros</span
+                >
+                <span
+                  class="text-2xl font-black text-[#009bda] tracking-tighter"
+                  >SUHAI</span
+                >
+                <span
+                  class="text-2xl font-extrabold text-[#005fb4] tracking-tight"
+                  >SulAmérica</span
+                >
+                <span
+                  class="text-2xl font-extrabold text-gray-800 tracking-tighter"
+                  >PORTO</span
+                >
               </div>
             </div>
 

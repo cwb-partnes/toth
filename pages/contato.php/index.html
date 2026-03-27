@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato | Toth Corretora de Seguros</title>
+    <meta
+      name="description"
+      content="Entre em contato com a Toth Corretora de Seguros. Atendimento via WhatsApp, telefone e e-mail. Solicite sua cotação agora."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { "toth-gold": "#c29b3a", "toth-dark": "#040404" },
+            fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+
+    <!-- Font Awesome & Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../../images/favicon.png" type="image/png" />
+
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* -------- PAGE HERO -------- */
+      .page-hero {
+        background: linear-gradient(
+          135deg,
+          #040404 0%,
+          #1a1a1a 60%,
+          #0e0e0e 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 30% 50%,
+          rgba(194, 155, 58, 0.15) 0%,
+          transparent 70%
+        );
+      }
+
+      /* -------- AREA CARDS -------- */
+      .area-card {
+        transition: all 0.35s;
+      }
+      .area-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+        border-color: rgba(194, 155, 58, 0.4);
+      }
+
+      /* -------- CONTACT CARDS -------- */
+      .contact-card {
+        transition: transform 0.3s;
+      }
+      .contact-card:hover {
+        transform: translateY(-4px);
+      }
+
+      /* -------- FORM STYLES -------- */
+      .form-field input,
+      .form-field textarea,
+      .form-field select {
+        width: 100%;
+        border: 1.5px solid #e5e7eb;
+        border-radius: 0.75rem;
+        padding: 0.875rem 1.125rem;
+        font-size: 0.95rem;
+        color: #1a1a1a;
+        transition:
+          border-color 0.25s,
+          box-shadow 0.25s;
+        background: white;
+        outline: none;
+      }
+      .form-field input:focus,
+      .form-field textarea:focus,
+      .form-field select:focus {
+        border-color: #c29b3a;
+        box-shadow: 0 0 0 3px rgba(194, 155, 58, 0.12);
+      }
+      .form-field label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 0.4rem;
+      }
+      .form-field textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      /* -------- GOLD DIVIDER -------- */
+      .gold-divider {
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #c29b3a, #d4b363);
+        border-radius: 9999px;
+      }
+
+      /* -------- WA FLOAT -------- */
+      .wa-float {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 999;
+        background: #25d366;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .wa-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+      }
+
+      /* -------- SUCCESS STATE -------- */
+      #wa-success {
+        display: none;
+      }
+      #wa-success.show {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- WhatsApp Float -->
+    <a
+      href="https://wa.me/5541997127102?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20seguros%20da%20Toth%20Corretora."
+      target="_blank"
+      class="wa-float"
+    >
+      <i class="fa-brands fa-whatsapp text-2xl text-white"></i>
+    </a>
+
+    <!-- ====== SHARED NAVBAR ====== -->
+    <toth-navbar active="contato" base="../../"></toth-navbar>
+
+    <!-- ====== PAGE HERO ====== -->
+    <section class="page-hero py-20">
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
+        <span
+          class="inline-block bg-toth-gold/10 border border-toth-gold/30 text-toth-gold text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4"
+          >Fale Conosco</span
+        >
+        <h1
+          class="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-4"
+        >
+          Contato
+        </h1>
+        <p class="text-gray-400 max-w-xl mx-auto text-lg">
+          Atendimento de qualidade, respostas rápidas e relacionamento próximo
+          com nossos clientes.
+        </p>
+        <!-- Breadcrumb -->
+        <nav
+          class="mt-6 flex items-center justify-center gap-2 text-sm text-gray-500"
+        >
+          <a
+            href="../../pages/index.php/index.html"
+            class="hover:text-toth-gold transition"
+            >Home</a
+          >
+          <i class="fa fa-chevron-right text-xs"></i>
+          <span class="text-toth-gold font-medium">Contato</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ====== ÁREAS DE ATENDIMENTO ====== -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="area-card bg-white border border-gray-100 rounded-2xl p-8"
+          >
+            <div
+              class="w-14 h-14 bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-5"
+            >
+              <i class="fa fa-briefcase text-2xl text-toth-gold"></i>
+            </div>
+            <h3 class="text-lg font-bold text-toth-dark mb-2">Comercial</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Atendimento para novos clientes, informações sobre serviços e
+              oportunidades de negócio.
+            </p>
+          </div>
+
+          <div
+            class="area-card bg-white border border-gray-100 rounded-2xl p-8"
+          >
+            <div
+              class="w-14 h-14 bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-5"
+            >
+              <i class="fa fa-headset text-2xl text-toth-gold"></i>
+            </div>
+            <h3 class="text-lg font-bold text-toth-dark mb-2">
+              Suporte ao Cliente
+            </h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Dúvidas, orientações e suporte dedicado. Nossa equipe está pronta
+              para ajudar você.
+            </p>
+          </div>
+
+          <div
+            class="area-card bg-white border border-gray-100 rounded-2xl p-8"
+          >
+            <div
+              class="w-14 h-14 bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-5"
+            >
+              <i class="fa fa-file-invoice-dollar text-2xl text-toth-gold"></i>
+            </div>
+            <h3 class="text-lg font-bold text-toth-dark mb-2">
+              Solicitar Orçamento
+            </h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Soluções com excelente custo-benefício, adaptadas ao seu perfil e
+              necessidades.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== MAIN CONTENT: FORM + INFO ====== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+          <!-- ---- FORM COLUMN ---- -->
+          <div class="lg:col-span-3">
+            <span
+              class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+              >Envie sua mensagem</span
+            >
+            <h2 class="text-3xl font-extrabold text-toth-dark mt-2 mb-2">
+              Fale Direto pelo WhatsApp
+            </h2>
+            <div class="gold-divider mb-8"></div>
+
+            <form id="form-contato" class="space-y-5" novalidate>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="form-field">
+                  <label for="nome">Seu nome *</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Ex: João Silva"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="telefone">Telefone / WhatsApp</label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(41) 99999-9999"
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="seguro">Tipo de seguro de interesse</label>
+                <select id="seguro" name="seguro">
+                  <option value="">Selecione uma opção</option>
+                  <option>Seguro Auto</option>
+                  <option>Seguro de Vida</option>
+                  <option>Seguro Residencial</option>
+                  <option>Seguro Empresarial</option>
+                  <option>Planos de Saúde</option>
+                  <option>Consórcios</option>
+                  <option>Outro / Não sei ainda</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  placeholder="Descreva o que precisa ou deixe uma pergunta..."
+                ></textarea>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <button
+                  type="submit"
+                  class="btn-gold text-white px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 text-base shadow-lg w-full sm:w-auto"
+                >
+                  <i class="fa-brands fa-whatsapp text-xl"></i>
+                  Chamar no WhatsApp
+                </button>
+                <a
+                  href="mailto:atendimento@tothcorretoradeseguros.com.br"
+                  class="border-2 border-toth-gold text-toth-gold hover:bg-toth-gold hover:text-white transition px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 text-base w-full sm:w-auto"
+                >
+                  <i class="fa fa-envelope"></i>
+                  Enviar E-mail
+                </a>
+              </div>
+
+              <!-- Success msg -->
+              <div
+                id="wa-success"
+                class="items-center gap-3 bg-green-50 border border-green-200 text-green-700 rounded-xl p-4 text-sm font-medium"
+              >
+                <i class="fa fa-circle-check text-green-500 text-lg"></i>
+                Abrindo o WhatsApp com sua mensagem...
+              </div>
+            </form>
+          </div>
+
+          <!-- ---- INFO COLUMN ---- -->
+          <div class="lg:col-span-2 space-y-5">
+            <span
+              class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+              >Outras Formas de Contato</span
+            >
+            <h2 class="text-3xl font-extrabold text-toth-dark mt-2 mb-6">
+              Estamos aqui <br />para você
+            </h2>
+
+            <div
+              class="contact-card bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-start gap-4"
+            >
+              <div
+                class="w-12 h-12 bg-toth-gold/10 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="fa fa-phone text-toth-gold text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-toth-dark text-sm mb-1">
+                  Telefone Fixo
+                </h4>
+                <a
+                  href="tel:4132055486"
+                  class="text-gray-600 hover:text-toth-gold transition font-medium"
+                  >(41) 3205-5486</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="contact-card bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-start gap-4"
+            >
+              <div
+                class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="fa-brands fa-whatsapp text-green-500 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-toth-dark text-sm mb-1">WhatsApp</h4>
+                <a
+                  href="https://wa.me/5541997127102"
+                  target="_blank"
+                  class="text-green-600 hover:text-green-700 transition font-semibold"
+                  >(41) 99712-7102</a
+                >
+                <p class="text-xs text-gray-400 mt-0.5">
+                  Resposta rápida via chat
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="contact-card bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-start gap-4"
+            >
+              <div
+                class="w-12 h-12 bg-toth-gold/10 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="fa fa-envelope text-toth-gold text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-toth-dark text-sm mb-1">E-mail</h4>
+                <a
+                  href="mailto:atendimento@tothcorretoradeseguros.com.br"
+                  class="text-gray-600 hover:text-toth-gold transition text-sm break-all"
+                >
+                  atendimento@tothcorretoradeseguros.com.br
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="contact-card bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-start gap-4"
+            >
+              <div
+                class="w-12 h-12 bg-toth-gold/10 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="fa fa-clock text-toth-gold text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-toth-dark text-sm mb-1">
+                  Horário de Atendimento
+                </h4>
+                <p class="text-gray-600 font-medium text-sm">Segunda a Sexta</p>
+                <p class="text-toth-gold font-bold">08:00 às 18:00</p>
+              </div>
+            </div>
+
+            <div
+              class="contact-card bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-start gap-4"
+            >
+              <div
+                class="w-12 h-12 bg-toth-gold/10 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="fa fa-location-dot text-toth-gold text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-toth-dark text-sm mb-1">
+                  Localização
+                </h4>
+                <p class="text-gray-600 text-sm">Curitiba, Paraná — Brasil</p>
+                <p class="text-xs text-gray-400 mt-0.5">
+                  Atendemos clientes em todo o país
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== MAPA ====== -->
+    <section class="h-80 w-full">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.3456082649565!2d-49.27368568493476!3d-25.428954383780655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce4ead2abca6b%3A0x4b2cc21f2bd3c2c3!2sCuritiba%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1680000000000!5m2!1spt-BR!2sbr"
+        class="w-full h-full border-0 grayscale contrast-110 opacity-90"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização Curitiba PR"
+      >
+      </iframe>
+    </section>
+
+    <!-- ====== FAQ RÁPIDO ====== -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span
+            class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+            >Dúvidas Frequentes</span
+          >
+          <h2 class="text-3xl font-extrabold text-toth-dark mt-2">
+            Perguntas sobre Atendimento
+          </h2>
+          <div class="gold-divider mx-auto mt-4"></div>
+        </div>
+
+        <div class="space-y-3">
+          <details
+            class="toth-faq bg-white rounded-2xl border border-gray-100 overflow-hidden"
+          >
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer font-semibold text-toth-dark hover:text-toth-gold transition select-none"
+            >
+              Em quanto tempo recebo uma resposta?
+              <i
+                class="fa fa-chevron-down text-xs text-toth-gold chevron transition-transform"
+              ></i>
+            </summary>
+            <div
+              class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4"
+            >
+              Nosso tempo médio de resposta via WhatsApp é de poucos minutos
+              durante o horário comercial (Seg–Sex, 8h–18h). Por e-mail,
+              respondemos em até 1 dia útil.
+            </div>
+          </details>
+
+          <details
+            class="toth-faq bg-white rounded-2xl border border-gray-100 overflow-hidden"
+          >
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer font-semibold text-toth-dark hover:text-toth-gold transition select-none"
+            >
+              Vocês atendem fora de Curitiba?
+              <i
+                class="fa fa-chevron-down text-xs text-toth-gold chevron transition-transform"
+              ></i>
+            </summary>
+            <div
+              class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4"
+            >
+              Sim! Atendemos clientes de todo o Brasil de forma remota, via
+              WhatsApp, e-mail e videochamada. Não é necessário comparecer
+              presencialmente.
+            </div>
+          </details>
+
+          <details
+            class="toth-faq bg-white rounded-2xl border border-gray-100 overflow-hidden"
+          >
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer font-semibold text-toth-dark hover:text-toth-gold transition select-none"
+            >
+              Como faço para solicitar uma cotação?
+              <i
+                class="fa fa-chevron-down text-xs text-toth-gold chevron transition-transform"
+              ></i>
+            </summary>
+            <div
+              class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4"
+            >
+              Basta preencher o formulário acima e clicar em "Chamar no
+              WhatsApp", ou entrar em contato diretamente pelo número (41)
+              99712-7102. Nossa equipe vai analisar seu perfil e apresentar as
+              melhores opções.
+            </div>
+          </details>
+
+          <details
+            class="toth-faq bg-white rounded-2xl border border-gray-100 overflow-hidden"
+          >
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer font-semibold text-toth-dark hover:text-toth-gold transition select-none"
+            >
+              A cotação é gratuita?
+              <i
+                class="fa fa-chevron-down text-xs text-toth-gold chevron transition-transform"
+              ></i>
+            </summary>
+            <div
+              class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4"
+            >
+              Sim, totalmente gratuita e sem compromisso. Trabalhamos para
+              encontrar a melhor solução para o seu perfil, com custo-benefício
+              e proteção real.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SHARED FOOTER ====== -->
+    <toth-footer base="../../"></toth-footer>
+
+    <!-- ====== SCRIPTS ====== -->
+    <script src="../../components.js"></script>
+
+    <script>
+      // ---- WhatsApp Form ----
+      document
+        .getElementById("form-contato")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nome = document.getElementById("nome").value.trim();
+          const tel = document.getElementById("telefone").value.trim();
+          const seguro = document.getElementById("seguro").value;
+          const msg = document.getElementById("mensagem").value.trim();
+
+          if (!nome) {
+            document.getElementById("nome").focus();
+            document.getElementById("nome").style.borderColor = "#ef4444";
+            return;
+          }
+
+          let texto = `Olá! Meu nome é *${nome}*.`;
+          if (tel) texto += `\nMeu telefone: ${tel}`;
+          if (seguro) texto += `\nInteresse em: *${seguro}*`;
+          if (msg) texto += `\n\n${msg}`;
+          texto += `\n\nAcabei de visitar o site e gostaria de mais informações.`;
+
+          const url =
+            "https://wa.me/5541997127102?text=" + encodeURIComponent(texto);
+
+          const success = document.getElementById("wa-success");
+          success.classList.add("show");
+          setTimeout(() => {
+            window.open(url, "_blank");
+          }, 400);
+        });
+
+      // Reset border on input
+      document.getElementById("nome").addEventListener("input", function () {
+        this.style.borderColor = "";
+      });
+
+      // ---- FAQ Accordion ----
+      document.querySelectorAll(".toth-faq").forEach((d) => {
+        d.addEventListener("toggle", () => {
+          const chevron = d.querySelector(".chevron");
+          chevron.style.transform = d.open ? "rotate(180deg)" : "";
+          if (d.open) {
+            document.querySelectorAll(".toth-faq").forEach((other) => {
+              if (other !== d) {
+                other.open = false;
+                other.querySelector(".chevron").style.transform = "";
+              }
+            });
+          }
+        });
+      });
+    </script>
+
+    <style>
+      .btn-gold {
+        background: linear-gradient(135deg, #c29b3a 0%, #b0892b 100%);
+        transition: all 0.3s ease;
+      }
+      .btn-gold:hover {
+        box-shadow: 0 12px 24px -8px rgba(194, 155, 58, 0.6);
+        transform: translateY(-2px);
+      }
+    </style>
+  </body>
+</html>

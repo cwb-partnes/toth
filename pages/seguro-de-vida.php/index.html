@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seguro de Vida | Toth Corretora de Seguros</title>
+    <meta
+      name="description"
+      content="Proteja o futuro de quem você mais ama com o Seguro de Vida da Toth. Coberturas para invalidez, doenças graves e morte."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { "toth-gold": "#c29b3a", "toth-dark": "#040404" },
+            fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+
+    <!-- Font Awesome & Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../../images/favicon.png" type="image/png" />
+
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+      .service-hero {
+        background: linear-gradient(rgba(4, 4, 4, 0.7), rgba(4, 4, 4, 0.8));
+        position: relative;
+      }
+      .sidebar-nav a {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        color: #4b5563;
+        border-radius: 0.5rem;
+        transition: all 0.2s;
+        font-weight: 500;
+        border-left: 3px solid transparent;
+      }
+      .sidebar-nav a:hover {
+        background: #f3f4f6;
+        color: #111827;
+        border-left-color: #d1d5db;
+      }
+      .sidebar-nav a.active {
+        background: rgba(194, 155, 58, 0.1);
+        color: #c29b3a;
+        border-left-color: #c29b3a;
+      }
+      .toth-accordion summary {
+        list-style: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.25rem;
+        border-radius: 0.75rem;
+        background: #f9f9f9;
+        font-weight: 600;
+        color: #1a1a1a;
+        transition: all 0.25s;
+        user-select: none;
+      }
+      .toth-accordion summary::-webkit-details-marker {
+        display: none;
+      }
+      .toth-accordion details[open] summary {
+        color: #c29b3a;
+        background: rgba(194, 155, 58, 0.06);
+        border-radius: 0.75rem 0.75rem 0 0;
+      }
+      .toth-accordion summary .chevron {
+        transition: transform 0.3s;
+      }
+      .toth-accordion details[open] summary .chevron {
+        transform: rotate(180deg);
+      }
+      .toth-accordion .panel-body {
+        background: rgba(194, 155, 58, 0.04);
+        border: 1px solid rgba(194, 155, 58, 0.15);
+        border-top: none;
+        border-radius: 0 0 0.75rem 0.75rem;
+        padding: 1rem 1.25rem;
+        color: #555;
+        font-size: 0.94rem;
+        line-height: 1.7;
+      }
+      .gold-divider {
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #c29b3a, #d4b363);
+        border-radius: 9999px;
+      }
+      .wa-float {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 999;
+        background: #25d366;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .wa-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+      }
+      .circle-progress {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: conic-gradient(#c29b3a var(--value), #f3f4f6 0);
+        position: relative;
+      }
+      .circle-progress::before {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        background: white;
+        border-radius: 50%;
+      }
+      .circle-progress span {
+        position: relative;
+        z-index: 1;
+        font-weight: 800;
+        color: #040404;
+        font-size: 1.5rem;
+      }
+      .circle-progress p {
+        position: relative;
+        z-index: 1;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #6b7280;
+        margin-top: -2px;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- WhatsApp Float -->
+    <a
+      href="https://wa.me/5541997127102?text=Olá,%20gostaria%20de%20uma%20cotação%20para%20Seguro%20de%20Vida."
+      target="_blank"
+      class="wa-float"
+    >
+      <i class="fa-brands fa-whatsapp text-2xl text-white"></i>
+    </a>
+
+    <!-- ====== SHARED NAVBAR ====== -->
+    <toth-navbar active="seguros-e-mais" base="../../"></toth-navbar>
+
+    <!-- ====== PAGE HERO ====== -->
+    <section class="service-hero py-24 lg:py-32">
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
+        <h1
+          class="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-4"
+        >
+          Seguro de Vida
+        </h1>
+        <p class="text-gray-300 max-w-2xl mx-auto text-lg">
+          Tranquilidade e segurança amparando financeiramente a sua família ou o
+          seu próprio futuro em casos inesperados.
+        </p>
+        <!-- Breadcrumb -->
+        <nav
+          class="mt-6 flex items-center justify-center gap-2 text-sm text-gray-400"
+        >
+          <a
+            href="../../pages/index.php/index.html"
+            class="hover:text-toth-gold transition"
+            >Home</a
+          >
+          <i class="fa fa-chevron-right text-xs"></i>
+          <span>Seguros e mais</span>
+          <i class="fa fa-chevron-right text-xs"></i>
+          <span class="text-toth-gold text-white font-medium"
+            >Seguro de Vida</span
+          >
+        </nav>
+      </div>
+    </section>
+
+    <!-- ====== CONTENT GRID ====== -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12">
+          <!-- SIDEBAR -->
+          <aside class="w-full lg:w-1/4">
+            <div class="sticky top-28 space-y-8">
+              <div class="bg-gray-50 border border-gray-100 rounded-2xl p-6">
+                <h3 class="font-bold text-gray-900 text-lg mb-4">
+                  Outros Serviços
+                </h3>
+                <nav class="sidebar-nav space-y-1">
+                  <a href="../seguro-auto.php/index.html">Seguro Auto</a>
+                  <a href="../seguro-residencial.php/index.html"
+                    >Seguro Residencial</a
+                  >
+                  <a href="../seguro-equipamentos.php/index.html"
+                    >Seguro Equipamentos</a
+                  >
+                  <a href="../seguro-empresarial.php/index.html"
+                    >Seguro Empresarial</a
+                  >
+                  <a href="index.html" class="active">Seguro de Vida</a>
+                  <a href="../consorcios.php/index.html">Consórcios</a>
+                  <a href="../plano-de-saude.php/index.html">Plano de Saúde</a>
+                </nav>
+              </div>
+              <!-- Cotação -->
+              <div
+                class="bg-toth-dark rounded-2xl p-6 text-white text-center sm:text-left"
+              >
+                <div
+                  class="w-12 h-12 bg-toth-gold/20 flex items-center justify-center rounded-full mb-4 mx-auto sm:mx-0"
+                >
+                  <i class="fa fa-heart-pulse text-toth-gold text-xl"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-2">Cotação Rápida</h4>
+                <p class="text-gray-400 text-sm mb-6">
+                  Construímos um planejamento sucessório que cabe no seu bolso e
+                  assegura quem você mais ama.
+                </p>
+                <a
+                  href="../contato.php/index.html"
+                  class="inline-block w-full text-center bg-toth-gold text-toth-dark hover:bg-[#d4b363] transition px-4 py-3 rounded-lg font-bold text-sm"
+                >
+                  Solicitar Cotação
+                </a>
+              </div>
+            </div>
+          </aside>
+
+          <!-- MAIN CONTENT -->
+          <main class="w-full lg:w-3/4">
+            <h2 class="text-3xl font-extrabold text-toth-dark mb-4">
+              Um ato de amor com planejamento
+            </h2>
+            <div class="gold-divider mb-6"></div>
+            <p class="text-gray-600 leading-relaxed text-lg mb-10">
+              A principal missão do Seguro de Vida da Toth é blindar a qualidade
+              de vida e a estabilidade financeira familiar. Muito além do evento
+              de falecimento, os seguros modernos oferecem coberturas massivas
+              em vida, entregando suporte direto ao segurado se ele for
+              acometido por acidentes, invalidez temporária de trabalho e
+              doenças graves.
+            </p>
+
+            <div
+              class="bg-gray-50 border border-gray-100 rounded-2xl p-8 mb-12 flex flex-col sm:flex-row gap-8 items-center"
+            >
+              <div class="flex-1">
+                <h4 class="text-xl font-bold text-gray-900 mb-3">
+                  Coberturas para utilizar em Vida
+                </h4>
+                <p class="text-gray-600 mb-0">
+                  A principal quebra de paradigma: você pode usufruir do próprio
+                  Seguro de Vida. Indenizações diretas ao receber diagnósticos
+                  de câncer, infarto e AVC (Doenças Graves), além de diárias
+                  pagas (DIT) caso precise afastar-se do trabalho por ordem
+                  médica.
+                </p>
+              </div>
+              <div class="flex gap-6 justify-center">
+                <div class="circle-progress" style="--value: 90%">
+                  <span>+Vida</span>
+                  <p>USO EM VIDA</p>
+                </div>
+                <div class="circle-progress" style="--value: 100%">
+                  <span>100%</span>
+                  <p>CUIDADO</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-2xl font-bold text-toth-dark mb-6">
+              Coberturas Flexíveis e Completas
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              <div
+                class="border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-toth-gold/10 rounded-lg flex items-center justify-center mb-4"
+                >
+                  <i class="fa fa-user-shield text-toth-gold text-xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-2">
+                  Invalidez por Acidente
+                </h4>
+                <p class="text-sm text-gray-600">
+                  Recebimento parcial ou integral do capital se um acidente
+                  causar a perda de membros ou órgãos, impedindo o trabalho.
+                </p>
+              </div>
+              <div
+                class="border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-toth-gold/10 rounded-lg flex items-center justify-center mb-4"
+                >
+                  <i class="fa fa-briefcase-medical text-toth-gold text-xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-2">Doenças Graves</h4>
+                <p class="text-sm text-gray-600">
+                  Apoio material no diagnóstico de condições severas, ajudando a
+                  focar exclusivamente na recuperação e tratamento.
+                </p>
+              </div>
+              <div
+                class="border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition duration-300"
+              >
+                <div
+                  class="w-12 h-12 bg-toth-gold/10 rounded-lg flex items-center justify-center mb-4"
+                >
+                  <i
+                    class="fa fa-hands-holding-child text-toth-gold text-xl"
+                  ></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-2">
+                  Morte (Plena Proteção)
+                </h4>
+                <p class="text-sm text-gray-600">
+                  Os beneficiários escolhidos recebem 100% da verba
+                  indenizatória descrita, livres de cobrança de imposto de renda
+                  e inventários.
+                </p>
+              </div>
+            </div>
+
+            <h3 class="text-2xl font-bold text-toth-dark mb-6">
+              Dúvidas Comuns
+            </h3>
+
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 toth-accordion"
+            >
+              <div class="space-y-4">
+                <details>
+                  <summary>
+                    Seguro de Vida entra em inventário?
+                    <i
+                      class="fa fa-chevron-down chevron text-toth-gold text-xs"
+                    ></i>
+                  </summary>
+                  <div class="panel-body">
+                    Não! A maior vantagem financeira é a liquidez imediata. A
+                    indenização é transferida legalmente aos beneficiários sem
+                    precisar aguardar processos de inventário judicial e sem
+                    pagar ITCMD.
+                  </div>
+                </details>
+                <details>
+                  <summary>
+                    Quem pode ser o meu beneficiário?
+                    <i
+                      class="fa fa-chevron-down chevron text-toth-gold text-xs"
+                    ></i>
+                  </summary>
+                  <div class="panel-body">
+                    Por lei, qualquer pessoa da sua escolha (parente, amigo
+                    ausente), na porcentagem que você desejar estabelecer. Caso
+                    nenhum seja apontado, seguem-se os herdeiros legais em lei.
+                  </div>
+                </details>
+              </div>
+              <div class="space-y-4">
+                <details>
+                  <summary>
+                    Profissionais autônomos podem ter?
+                    <i
+                      class="fa fa-chevron-down chevron text-toth-gold text-xs"
+                    ></i>
+                  </summary>
+                  <div class="panel-body">
+                    É altamente recomendado. Com a inclusão da DIT (Diária por
+                    Incapacidade Temporária), dentistas, advogados e
+                    comerciantes têm sua renda protegida se não puderem atuar.
+                  </div>
+                </details>
+                <details>
+                  <summary>
+                    Doenças pré-existentes são aceitas?
+                    <i
+                      class="fa fa-chevron-down chevron text-toth-gold text-xs"
+                    ></i>
+                  </summary>
+                  <div class="panel-body">
+                    Depende da análise da seguradora, e exige total
+                    transparência pela Declaração Pessoal de Saúde no momento da
+                    assinatura para evitar negativas no futuro.
+                  </div>
+                </details>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <toth-footer base="../../" class="block"></toth-footer>
+
+    <script src="../../components.js"></script>
+    <script>
+      document.querySelectorAll(".toth-accordion details").forEach((d) => {
+        d.addEventListener("toggle", () => {
+          if (d.open) {
+            document
+              .querySelectorAll(".toth-accordion details")
+              .forEach((other) => {
+                if (other !== d) other.open = false;
+              });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

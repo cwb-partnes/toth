@@ -31,10 +31,11 @@
 
 .hero-slide .hero-img {
   position: absolute;
-  right: 0;
+  right: calc(max(0px, 50vw - 700px));
   bottom: 0;
   height: 100%;
   width: 50%;
+  max-width: 700px;
   object-fit: contain;
   object-position: bottom right;
   z-index: 0;

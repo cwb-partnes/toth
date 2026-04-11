@@ -112,7 +112,44 @@
             </div>
           </div>
         </div>
-        <!-- Slide 2 -->
+        <!-- Slide 2 (Saúde) -->
+        <div class="hero-slide">
+          <div class="overlay"></div>
+          <img
+            src="../../images/home_familia_2.png"
+            alt="Plano de Saúde para a Família"
+            class="hero-img"
+          />
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content">
+              <span
+                class="inline-block py-1 px-3 rounded-full bg-toth-gold/20 border border-toth-gold/30 text-toth-gold text-xs font-bold tracking-widest uppercase mb-5"
+                >Especialistas em Saúde</span
+              >
+              <h1
+                class="text-3xl md:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-tight mb-5 tracking-tight"
+              >
+                O Melhor Plano de Saúde<br />para a
+                <span class="text-gradient-gold">Sua Família</span>
+              </h1>
+              <p
+                class="text-base md:text-lg text-gray-300 mb-8 leading-relaxed font-light max-w-lg"
+              >
+                Trabalhamos com as maiores operadoras do Brasil para garantir
+                infraestrutura de ponta e proteção financeira na hora que você
+                mais precisar.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="../plano-de-saude.php/index.html"
+                  class="btn-gold text-white px-7 py-3.5 rounded-lg font-bold text-sm shadow-[0_0_20px_rgba(194,155,58,.3)]"
+                  >Ver Planos</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
         <div class="hero-slide">
           <div class="overlay"></div>
           <img
@@ -150,7 +187,7 @@
             </div>
           </div>
         </div>
-        <!-- Slide 3 -->
+        <!-- Slide 4 -->
         <div class="hero-slide">
           <div class="overlay"></div>
           <img
@@ -194,6 +231,7 @@
         <button class="active" onclick="goSlide(0)"></button>
         <button onclick="goSlide(1)"></button>
         <button onclick="goSlide(2)"></button>
+        <button onclick="goSlide(3)"></button>
       </div>
     </section>
 
@@ -1062,7 +1100,7 @@
     <!-- Slider JS -->
     <script>
       let current = 0;
-      const total = 3;
+      const total = 4;
       let timer;
       function goSlide(n) {
         current = n;

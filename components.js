@@ -50,8 +50,8 @@ class TothNavbar extends HTMLElement {
                     <span class="hidden sm:inline"><i class="fa fa-clock mr-1"></i>Seg à Sex - 8h às 18h</span>
                     <span class="hidden md:inline"><i class="fa fa-location-dot mr-1"></i>Curitiba, PR</span>
                     <div class="flex gap-4 text-white">
-                        <a href="#" class="hover:text-toth-gold transition text-sm"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="hover:text-toth-gold transition text-sm"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/tothcorretoradeseguros" target="_blank" class="hover:text-toth-gold transition text-sm"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/tothcorretora" target="_blank" class="hover:text-toth-gold transition text-sm"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -151,8 +151,8 @@ class TothFooter extends HTMLElement {
                             Soluções completas em seguros auto, vida, residencial e empresarial, com excelência no atendimento e as melhores seguradoras.
                         </p>
                         <div class="flex space-x-3">
-                            <a href="#" class="footer-social w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fa-brands fa-facebook-f text-sm"></i></a>
-                            <a href="#" class="footer-social w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fa-brands fa-instagram text-sm"></i></a>
+                            <a href="https://www.facebook.com/tothcorretoradeseguros" target="_blank" class="footer-social w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                            <a href="https://www.instagram.com/tothcorretora/" target="_blank" class="footer-social w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fa-brands fa-instagram text-sm"></i></a>
                         </div>
                     </div>
                     <div>

@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consórcios Premium | Toth Corretora</title>
+    <meta
+      name="description"
+      content="Multiplique seu patrimônio de forma planejada e sem pagar juros. Consórcio de imóveis, veículos e pesados com as melhores administradoras do Brasil."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "toth-gold": "#c29b3a",
+              "toth-dark": "#040404",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Font Awesome & Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* -------- BUTTONS ======== */
+      .btn-gold {
+        background: linear-gradient(135deg, #c29b3a 0%, #b0892b 100%);
+        transition: all 0.3s ease;
+      }
+      .btn-gold:hover {
+        box-shadow: 0 12px 24px -8px rgba(194, 155, 58, 0.6);
+        transform: translateY(-2px);
+      }
+
+      .btn-outline-gold {
+        border: 2px solid rgba(194, 155, 58, 0.5);
+        color: #c29b3a;
+        transition: all 0.3s;
+      }
+      .btn-outline-gold:hover {
+        background: rgba(194, 155, 58, 0.05);
+        border-color: #c29b3a;
+      }
+
+      .text-gradient-gold {
+        background: linear-gradient(135deg, #c29b3a, #d4b363);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* -------- HEADER ======== */
+      .lp-header {
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(12px);
+      }
+
+      /* -------- HERO ======== */
+      .hero-lp {
+        background:
+          linear-gradient(
+            135deg,
+            rgba(4, 4, 4, 0.8) 0%,
+            rgba(26, 26, 26, 0.4) 50%,
+            rgba(4, 4, 4, 0.9) 100%
+          ),
+          url("images/lp_consorcio_hero.png");
+        background-size: cover;
+        background-position: center;
+        min-height: 65vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      @media (min-width: 1024px) {
+        .hero-lp {
+          background-attachment: fixed;
+        }
+      }
+
+      /* ========= IMAGE CARDS ========= */
+      .img-card img {
+        transition: transform 0.7s ease;
+      }
+      .img-card:hover img {
+        transform: scale(1.1);
+      }
+      .img-card .card-overlay {
+        transition: opacity 0.3s;
+      }
+      .img-card:hover .card-reveal {
+        opacity: 1;
+        max-height: 60px;
+        margin-bottom: 12px;
+      }
+      .card-reveal {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease;
+      }
+
+      /* -------- FAQ ======== */
+      details[open] summary {
+        color: #c29b3a;
+        background: rgba(194, 155, 58, 0.05);
+      }
+      details summary .chevron {
+        transition: transform 0.3s;
+      }
+      details[open] summary .chevron {
+        transform: rotate(180deg);
+      }
+
+      /* -------- WA FLOAT ======== */
+      .wa-float {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 999;
+        background: #25d366;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .wa-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- WhatsApp Float -->
+    <a
+      href="https://wa.me/5541997127102?text=Olá,%20gostaria%20de%20fazer%20uma%20simulação%20de%20Consórcio."
+      target="_blank"
+      class="wa-float"
+    >
+      <i class="fa-brands fa-whatsapp text-3xl text-white"></i>
+    </a>
+
+    <!-- ====== HEADER STANDALONE ====== -->
+    <header
+      class="lp-header sticky top-0 z-50 border-b border-gray-100 shadow-sm py-4"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 bg-toth-gold rounded-full flex justify-center items-center"
+          >
+            <span class="text-white font-serif font-bold text-xl">T</span>
+          </div>
+          <div>
+            <h1
+              class="text-xl font-bold tracking-tight text-toth-dark leading-none"
+            >
+              Toth
+            </h1>
+            <span
+              class="text-[0.65rem] uppercase tracking-[0.2em] text-toth-gold font-bold"
+              >Corretora</span
+            >
+          </div>
+        </div>
+        <a
+          href="https://wa.me/5541997127102"
+          target="_blank"
+          class="btn-gold hidden md:flex text-white px-6 py-2.5 rounded-full font-bold items-center gap-2 text-sm"
+        >
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          Falar com Especialista
+        </a>
+      </div>
+    </header>
+
+    <!-- ====== HERO SECTION ====== -->
+    <section class="hero-lp">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 py-12">
+        <div class="max-w-2xl">
+          <span
+            class="inline-block py-1.5 px-4 rounded-full bg-toth-gold/20 border border-toth-gold/30 text-toth-gold text-xs font-bold tracking-widest uppercase mb-6 shadow-sm"
+          >
+            Planejamento Inteligente
+          </span>
+          <h1
+            class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6 tracking-tight"
+          >
+            Multiplique seu
+            <span class="text-gradient-gold">Patrimônio</span> sem Pagar Juros.
+          </h1>
+          <p
+            class="text-base md:text-lg text-gray-300 mb-8 leading-relaxed font-light"
+          >
+            Fuja dos juros abusivos de financiamentos. Planeje a compra do seu
+            imóvel novo, carro zero ou equipamento pesado com o poder da carta
+            de crédito contemplada via assessoria Toth.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="https://wa.me/5541997127102?text=Olá,%20quero%20simular%20um%20Consórcio."
+              class="btn-gold text-white px-8 py-4 rounded-full font-bold text-center text-base flex justify-center items-center gap-2"
+            >
+              Investir no Futuro <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+          <div
+            class="mt-8 flex items-center gap-4 border-t border-white/10 pt-6"
+          >
+            <div class="flex -space-x-3">
+              <img
+                src="https://i.pravatar.cc/100?img=11"
+                alt="Cliente"
+                class="w-10 h-10 rounded-full border-2 border-toth-dark"
+              />
+              <img
+                src="https://i.pravatar.cc/100?img=22"
+                alt="Cliente"
+                class="w-10 h-10 rounded-full border-2 border-toth-dark"
+              />
+              <img
+                src="https://i.pravatar.cc/100?img=33"
+                alt="Cliente"
+                class="w-10 h-10 rounded-full border-2 border-toth-dark"
+              />
+            </div>
+            <p class="text-sm text-gray-400 font-medium">
+              Mais de <span class="text-white">R$ 50M</span> em cartas de
+              crédito administradas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== BENEFÍCIOS ====== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span
+            class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+            >Por que Consórcio?</span
+          >
+          <h2 class="text-3xl font-extrabold text-toth-dark mt-2">
+            Construa riqueza com inteligência
+          </h2>
+          <div class="w-16 h-1 bg-toth-gold rounded-full mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 rounded-3xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100"
+          >
+            <div
+              class="w-14 h-14 bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i class="fa fa-percent text-2xl text-toth-gold"></i>
+            </div>
+            <h3 class="text-xl font-bold text-toth-dark mb-3">
+              Ausência de Juros
+            </h3>
+            <p class="text-gray-500 leading-relaxed">
+              Diferente do financiamento, no consórcio você paga apenas uma taxa
+              de administração diluída. Economia que chega a centenas de
+              milhares de reais.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 rounded-3xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100"
+          >
+            <div
+              class="w-14 h-14 bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i class="fa fa-wallet text-2xl text-toth-gold"></i>
+            </div>
+            <h3 class="text-xl font-bold text-toth-dark mb-3">
+              Poder de Compra à Vista
+            </h3>
+            <p class="text-gray-500 leading-relaxed">
+              Ao ser contemplado, sua carta de crédito tem o mesmo poder do
+              dinheiro na mão, permitindo negociar grandes descontos na compra
+              do seu bem.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 rounded-3xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100"
+          >
+            <div
+              class="w-14 h-14 bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i
+                class="fa fa-arrows-split-up-and-left text-2xl text-toth-gold"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-toth-dark mb-3">
+              Flexibilidade Total
+            </h3>
+            <p class="text-gray-500 leading-relaxed">
+              Utilize o crédito para comprar, construir, reformar, pagar dívidas
+              de financiamentos antigos ou até mesmo para investimentos como
+              pessoa jurídica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== O QUE VOCÊ PODE CONQUISTAR? ====== -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span
+            class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+            >Cartas de Crédito</span
+          >
+          <h2 class="text-3xl md:text-4xl font-extrabold text-toth-dark mt-2">
+            O que você pode adquirir?
+          </h2>
+          <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+            O consórcio oferece liberdade total. Sendo contemplado, você pode
+            adquirir qualquer um dos itens abaixo da mesma categoria.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div
+            class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-lg hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-14 h-14 mx-auto bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa fa-house text-xl text-toth-gold"></i>
+            </div>
+            <h4 class="font-bold text-toth-dark text-sm">Imóvel Novo</h4>
+            <p class="text-xs text-gray-400 mt-1">Casas e apartamentos</p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-lg hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-14 h-14 mx-auto bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa fa-hammer text-xl text-toth-gold"></i>
+            </div>
+            <h4 class="font-bold text-toth-dark text-sm">Reformas</h4>
+            <p class="text-xs text-gray-400 mt-1">Material e mão de obra</p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-lg hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-14 h-14 mx-auto bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa fa-map-location-dot text-xl text-toth-gold"></i>
+            </div>
+            <h4 class="font-bold text-toth-dark text-sm">Lotes e Terrenos</h4>
+            <p class="text-xs text-gray-400 mt-1">Construção livre</p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-lg hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-14 h-14 mx-auto bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa fa-building text-xl text-toth-gold"></i>
+            </div>
+            <h4 class="font-bold text-toth-dark text-sm">Imóvel Comercial</h4>
+            <p class="text-xs text-gray-400 mt-1">Sedes empresariais</p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-lg hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-14 h-14 mx-auto bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa fa-solar-panel text-xl text-toth-gold"></i>
+            </div>
+            <h4 class="font-bold text-toth-dark text-sm">Placas Solares</h4>
+            <p class="text-xs text-gray-400 mt-1">Energia limpa para empresa</p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-lg hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-14 h-14 mx-auto bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa fa-car text-xl text-toth-gold"></i>
+            </div>
+            <h4 class="font-bold text-toth-dark text-sm">Veículos Zero</h4>
+            <p class="text-xs text-gray-400 mt-1">Qualquer marca e modelo</p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-lg hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-14 h-14 mx-auto bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa fa-car-side text-xl text-toth-gold"></i>
+            </div>
+            <h4 class="font-bold text-toth-dark text-sm">Semi-Novos</h4>
+            <p class="text-xs text-gray-400 mt-1">Até 5 ou 10 anos de uso</p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-lg hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-14 h-14 mx-auto bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa fa-motorcycle text-xl text-toth-gold"></i>
+            </div>
+            <h4 class="font-bold text-toth-dark text-sm">Motos Premium</h4>
+            <p class="text-xs text-gray-400 mt-1">Alta cilindrada e padrão</p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-lg hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-14 h-14 mx-auto bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa fa-truck text-xl text-toth-gold"></i>
+            </div>
+            <h4 class="font-bold text-toth-dark text-sm">
+              Pesados e Caminhões
+            </h4>
+            <p class="text-xs text-gray-400 mt-1">Renovação de frotas</p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-lg hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-14 h-14 mx-auto bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa fa-tractor text-xl text-toth-gold"></i>
+            </div>
+            <h4 class="font-bold text-toth-dark text-sm">
+              Maquinário Agrícola
+            </h4>
+            <p class="text-xs text-gray-400 mt-1">Tratores e implementos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== A JORNADA TOTH (ZIGUEZAGUE) ====== -->
+    <section class="py-24 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Bloco 1 (Texto Esquerda / Img Direita) -->
+        <div class="flex flex-col lg:flex-row items-center gap-16 mb-24">
+          <div class="w-full lg:w-1/2">
+            <span
+              class="inline-block py-1.5 px-4 rounded-full bg-toth-gold/10 text-toth-gold text-xs font-bold tracking-widest uppercase mb-4"
+              >Acelerando Conquistas</span
+            >
+            <h2
+              class="text-3xl md:text-4xl font-extrabold text-toth-dark mb-6 leading-tight"
+            >
+              O carro dos seus sonhos sem amarras financeiras.
+            </h2>
+            <p class="text-gray-500 text-lg leading-relaxed mb-6">
+              O modelo tradicional de financiamento automotivo pode fazer você
+              pagar por mais de dois veículos ao longo dos anos. Nossa
+              corretoria estrutural encontra os grupos mais saudáveis e com
+              altas taxas de contemplação inicial.
+            </p>
+            <p class="text-gray-500 text-lg leading-relaxed mb-8">
+              Através de lances livres bem estudados e a utilização inteligente
+              do seu usado atual como lance, encurtamos drasticamente a
+              distância entre você e a sua próxima chave na mão.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-4 text-toth-dark font-medium">
+                <i
+                  class="fa fa-check text-green-500 border border-green-200 bg-green-50 rounded-full w-6 h-6 flex items-center justify-center text-xs"
+                ></i>
+                Lances com recursos do usado
+              </li>
+              <li class="flex items-center gap-4 text-toth-dark font-medium">
+                <i
+                  class="fa fa-check text-green-500 border border-green-200 bg-green-50 rounded-full w-6 h-6 flex items-center justify-center text-xs"
+                ></i>
+                Troca de frota periódica empresarial
+              </li>
+              <li class="flex items-center gap-4 text-toth-dark font-medium">
+                <i
+                  class="fa fa-check text-green-500 border border-green-200 bg-green-50 rounded-full w-6 h-6 flex items-center justify-center text-xs"
+                ></i>
+                Parcelas ajustáveis
+              </li>
+            </ul>
+          </div>
+          <div class="w-full lg:w-1/2 relative">
+            <div
+              class="absolute -inset-4 bg-toth-gold/20 rounded-[2.5rem] transform rotate-3 blur-sm"
+            ></div>
+            <img
+              src="images/lp_consorcio_info_1.png"
+              alt="Veículo luxo"
+              class="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/3] border-[6px] border-white"
+            />
+          </div>
+        </div>
+
+        <!-- Bloco 2 (Img Esquerda / Texto Direita) -->
+        <div class="flex flex-col-reverse lg:flex-row items-center gap-16">
+          <div class="w-full lg:w-1/2 relative">
+            <div
+              class="absolute -inset-4 bg-toth-dark/10 rounded-[2.5rem] transform -rotate-3 blur-sm"
+            ></div>
+            <img
+              src="images/lp_consorcio_info_2.png"
+              alt="Imóvel"
+              class="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/3] border-[6px] border-white"
+            />
+          </div>
+          <div class="w-full lg:w-1/2">
+            <span
+              class="inline-block py-1.5 px-4 rounded-full bg-toth-dark/5 text-toth-dark text-xs font-bold tracking-widest uppercase mb-4"
+              >Investimento Sólido</span
+            >
+            <h2
+              class="text-3xl md:text-4xl font-extrabold text-toth-dark mb-6 leading-tight"
+            >
+              O mercado imobiliário trabalhando a seu favor.
+            </h2>
+            <p class="text-gray-500 text-lg leading-relaxed mb-6">
+              A regra número um da riqueza é o acúmulo de tijolos. Seja para
+              sair do aluguel, investir em locação ou expandir sua empresa, o
+              consórcio de imóveis possibilita investimentos sem perda de
+              capital com os juros (CET) de um financiamento da Caixa.
+            </p>
+            <p class="text-gray-500 text-lg leading-relaxed">
+              Com a Toth, analisamos suas finanças, ajudamos a usar seu FGTS
+              como lance (onde aplicável) e montamos estratégias visando a
+              antecipação de contemplação de modo realista e seguro.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTADORES ANIMADOS ====== -->
+    <section class="py-20 bg-toth-dark relative overflow-hidden">
+      <div
+        class="absolute inset-0 opacity-[0.03]"
+        style="
+          background-image: radial-gradient(
+            circle,
+            #c29b3a 1px,
+            transparent 1px
+          );
+          background-size: 24px 24px;
+        "
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div>
+            <div
+              class="text-4xl md:text-5xl font-black text-toth-gold counter"
+              data-target="5000"
+            >
+              0
+            </div>
+            <p class="text-gray-400 mt-2 text-sm font-medium">Bens Entregues</p>
+          </div>
+          <div>
+            <div
+              class="text-4xl md:text-5xl font-black text-white counter"
+              data-target="15"
+            >
+              0
+            </div>
+            <p class="text-gray-400 mt-2 text-sm font-medium">
+              Administradoras
+            </p>
+          </div>
+          <div>
+            <div
+              class="text-4xl md:text-5xl font-black text-toth-gold counter"
+              data-target="99"
+            >
+              0
+            </div>
+            <p class="text-gray-400 mt-2 text-sm font-medium">% Satisfação</p>
+          </div>
+          <div>
+            <div
+              class="text-4xl md:text-5xl font-black text-white counter"
+              data-target="0"
+            >
+              0
+            </div>
+            <p class="text-gray-400 mt-2 text-sm font-medium">
+              % Juros Cobrados
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ADMINISTRADORAS PARCEIRAS ====== -->
+    <section class="py-20 bg-white border-y border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3
+          class="text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-12"
+        >
+          Consultoria das Melhores Administradoras:
+        </h3>
+        <div
+          class="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-70 grayscale hover:grayscale-0 transition-all duration-700"
+        >
+          <span class="text-2xl font-black text-gray-800">ADEMICON</span>
+          <span class="text-2xl font-black text-gray-800">PORTO SEGURO</span>
+          <span class="text-2xl font-black text-gray-800">ITAU</span>
+          <span class="text-2xl font-black text-gray-800">CAIXA</span>
+          <span class="text-2xl font-black text-gray-800">EMBRACON</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PASSO A PASSO ====== -->
+    <section class="py-24 bg-toth-dark text-white relative">
+      <div
+        class="absolute inset-0 opacity-5"
+        style="
+          background-image: radial-gradient(
+            circle at center,
+            #ffffff 1px,
+            transparent 1px
+          );
+          background-size: 20px 20px;
+        "
+      ></div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
+      >
+        <span class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+          >Processo Toth</span
+        >
+        <h2 class="text-3xl md:text-4xl font-extrabold mt-2 mb-16">
+          Como funciona a jornada?
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+          <!-- Connective line for desktop -->
+          <div
+            class="hidden md:block absolute top-[50px] left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-transparent via-toth-gold/30 to-transparent"
+          ></div>
+
+          <div class="relative">
+            <div
+              class="w-24 h-24 mx-auto bg-[#1a1a1a] border-2 border-toth-gold rounded-3xl flex items-center justify-center text-3xl font-black text-toth-gold mb-6 shadow-[0_0_30px_rgba(194,155,58,0.2)]"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-bold mb-3">Análise Financeira</h3>
+            <p class="text-gray-400 font-light text-sm leading-relaxed px-4">
+              Estudamos o seu momento de vida, capacidade de poupança e prazo
+              ideal para adequar a melhor administradora.
+            </p>
+          </div>
+          <div class="relative">
+            <div
+              class="w-24 h-24 mx-auto bg-[#1a1a1a] border-2 border-toth-gold rounded-3xl flex items-center justify-center text-3xl font-black text-toth-gold mb-6 shadow-[0_0_30px_rgba(194,155,58,0.2)]"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-bold mb-3">Adesão ao Grupo</h3>
+            <p class="text-gray-400 font-light text-sm leading-relaxed px-4">
+              Escolhemos grupos estratégicos, sejam recém-formados ou em
+              andamento, visando histórico de lances e performance.
+            </p>
+          </div>
+          <div class="relative">
+            <div
+              class="w-24 h-24 mx-auto bg-[#1a1a1a] border-2 border-toth-gold rounded-3xl flex items-center justify-center text-3xl font-black text-toth-gold mb-6 shadow-[0_0_30px_rgba(194,155,58,0.2)]"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-bold mb-3">Contemplação e Compra</h3>
+            <p class="text-gray-400 font-light text-sm leading-relaxed px-4">
+              Fazemos o acompanhamento sistemático de assembleias até a
+              contemplação e o faturamento do seu grande bem.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-16">
+          <a
+            href="https://wa.me/5541997127102"
+            class="btn-gold inline-block text-white px-8 py-4 rounded-full font-bold shadow-xl"
+          >
+            Simular Parcelas
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DEPOIMENTOS / PROVA SOCIAL ====== -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span
+            class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+            >Histórias Reais</span
+          >
+          <h2 class="text-3xl md:text-4xl font-extrabold text-toth-dark mt-2">
+            Patrimônio Multiplicado.
+          </h2>
+          <div class="w-16 h-1 bg-toth-gold rounded-full mx-auto mt-4"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 rounded-3xl p-8 border border-gray-100 relative"
+          >
+            <div
+              class="absolute -top-4 left-8 w-10 h-10 bg-toth-gold rounded-full flex items-center justify-center"
+            >
+              <i class="fa fa-quote-left text-white text-sm"></i>
+            </div>
+            <div class="flex items-center gap-4 mb-6 mt-2">
+              <img
+                src="https://i.pravatar.cc/100?img=17"
+                alt="Cliente"
+                class="w-14 h-14 rounded-full border-2 border-toth-gold/30 object-cover"
+              />
+              <div>
+                <h4 class="font-bold text-toth-dark">Thiago Rocha</h4>
+                <p class="text-xs text-gray-400">Consórcio Auto • R$ 150k</p>
+              </div>
+            </div>
+            <p class="text-gray-500 leading-relaxed text-sm italic">
+              “Queria trocar de carro mas os juros do financiamento estavam
+              surreais. Fui englobado num grupo com lance e em 4 meses saí de
+              BMW pagando preço de carro popular.”
+            </p>
+            <div class="flex gap-1 mt-4 text-toth-gold text-sm">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i>
+            </div>
+          </div>
+          <div
+            class="bg-gray-50 rounded-3xl p-8 border border-gray-100 relative"
+          >
+            <div
+              class="absolute -top-4 left-8 w-10 h-10 bg-toth-gold rounded-full flex items-center justify-center"
+            >
+              <i class="fa fa-quote-left text-white text-sm"></i>
+            </div>
+            <div class="flex items-center gap-4 mb-6 mt-2">
+              <img
+                src="https://i.pravatar.cc/100?img=42"
+                alt="Cliente"
+                class="w-14 h-14 rounded-full border-2 border-toth-gold/30 object-cover"
+              />
+              <div>
+                <h4 class="font-bold text-toth-dark">Juliana Meireles</h4>
+                <p class="text-xs text-gray-400">
+                  Consórcio Imobiliário • R$ 400k
+                </p>
+              </div>
+            </div>
+            <p class="text-gray-500 leading-relaxed text-sm italic">
+              “Usar meu FGTS como lance foi a melhor estratégia que a equipe
+              Toth me aconselhou. Saímos do aluguel direto pra casa dos nossos
+              sonhos sem doer no bolso.”
+            </p>
+            <div class="flex gap-1 mt-4 text-toth-gold text-sm">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i>
+            </div>
+          </div>
+          <div
+            class="bg-gray-50 rounded-3xl p-8 border border-gray-100 relative"
+          >
+            <div
+              class="absolute -top-4 left-8 w-10 h-10 bg-toth-gold rounded-full flex items-center justify-center"
+            >
+              <i class="fa fa-quote-left text-white text-sm"></i>
+            </div>
+            <div class="flex items-center gap-4 mb-6 mt-2">
+              <img
+                src="https://i.pravatar.cc/100?img=60"
+                alt="Cliente"
+                class="w-14 h-14 rounded-full border-2 border-toth-gold/30 object-cover"
+              />
+              <div>
+                <h4 class="font-bold text-toth-dark">Afonso Freitas</h4>
+                <p class="text-xs text-gray-400">Frota Empresa • R$ 800k</p>
+              </div>
+            </div>
+            <p class="text-gray-500 leading-relaxed text-sm italic">
+              “Como PJ, não podemos nos descapitalizar. O consórcio para
+              maquinário rodoviário e caminhões trouxe uma economia fiscal de
+              30% na estrutura da empresa.”
+            </p>
+            <div class="flex gap-1 mt-4 text-toth-gold text-sm">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i><i class="fa fa-star"></i
+              ><i class="fa fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== NOSSOS PERFIS ======== -->
+    <section class="py-20 bg-gray-50 border-y border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+          <div class="w-full lg:w-1/3">
+            <span
+              class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+              >Estratégias de Sucesso</span
+            >
+            <h2 class="text-3xl font-extrabold text-toth-dark mt-2 mb-6">
+              Cada objetivo tem um grupo perfeito
+            </h2>
+            <p class="text-gray-500 leading-relaxed mb-6">
+              Não empurramos produtos aleatoriamente. Sua dor determina nossos
+              métodos visando acelerar ao máximo as respostas da contemplação
+              com inteligência de números.
+            </p>
+            <a
+              href="https://wa.me/5541997127102"
+              class="btn-outline-gold font-bold py-3 px-6 rounded-full inline-flex items-center gap-2 text-sm uppercase tracking-wide"
+            >
+              Qual é o seu Perfil? <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div
+              class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex items-center gap-4"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex justify-center items-center flex-shrink-0 text-lg"
+              >
+                <i class="fa fa-key"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-toth-dark text-lg">
+                  Casa Própria / Aluguel
+                </h4>
+                <p class="text-sm text-gray-500">
+                  Planos longos (até 240 meses) com uso forte do FGTS.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex items-center gap-4"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-red-50 text-red-500 flex justify-center items-center flex-shrink-0 text-lg"
+              >
+                <i class="fa fa-car"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-toth-dark text-lg">
+                  Upgrade de Veículo
+                </h4>
+                <p class="text-sm text-gray-500">
+                  Uso do carro usado como lance embustido no processo.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex items-center gap-4"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-green-50 text-green-600 flex justify-center items-center flex-shrink-0 text-lg"
+              >
+                <i class="fa fa-chart-line"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-toth-dark text-lg">
+                  Investidor / Poupança
+                </h4>
+                <p class="text-sm text-gray-500">
+                  Compra de crédito barato e seguro para acumular patrimônio.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex items-center gap-4"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-purple-50 text-purple-600 flex justify-center items-center flex-shrink-0 text-lg"
+              >
+                <i class="fa fa-industry"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-toth-dark text-lg">
+                  PME e Frota Pesada
+                </h4>
+                <p class="text-sm text-gray-500">
+                  Crescimento logístico sem perder liquidez e fluxo de caixa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CROSS-SELL SECTION ====== -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span
+            class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+            >Ecxelência em proteção</span
+          >
+          <h2 class="text-4xl font-extrabold text-toth-dark mt-2">
+            A Toth Corretora vai muito além do seu consórcio
+          </h2>
+          <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+            Consolide suas apólices em um só lugar. Clientes Toth possuem
+            vantagens exclusivas ao unificarem assessoria conosco.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="img-card relative rounded-2xl overflow-hidden shadow-lg h-72 cursor-pointer border border-gray-100"
+          >
+            <img
+              src="images/home_saude.png"
+              class="w-full h-full object-cover"
+              alt="Saúde"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-toth-dark/90 via-toth-dark/30 to-transparent flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-1">Planos de Saúde</h3>
+              <p class="card-reveal text-gray-200 text-sm">
+                Ampla rede credenciada e cobertura completa para família.
+              </p>
+              <a
+                href="landing-saude.html"
+                class="inline-block px-4 py-2 bg-toth-gold text-white text-xs font-semibold rounded-lg hover:bg-white hover:text-toth-dark transition w-max"
+                >Saber Mais</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="img-card relative rounded-2xl overflow-hidden shadow-lg h-72 cursor-pointer border border-gray-100"
+          >
+            <img
+              src="images/home_seguro_vida2.png"
+              class="w-full h-full object-cover"
+              alt="Vida"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-toth-dark/90 via-toth-dark/30 to-transparent flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-1">Seguro de Vida</h3>
+              <p class="card-reveal text-gray-200 text-sm">
+                Segurança financeira para o seu bem e legado familiar.
+              </p>
+              <a
+                href="pages/seguro-de-vida.php/index.html"
+                class="inline-block px-4 py-2 bg-toth-gold text-white text-xs font-semibold rounded-lg hover:bg-white hover:text-toth-dark transition w-max"
+                >Saber Mais</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="img-card relative rounded-2xl overflow-hidden shadow-lg h-72 cursor-pointer border border-gray-100"
+          >
+            <img
+              src="images/seguro-empresarial.jpg"
+              class="w-full h-full object-cover"
+              alt="Empresarial"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-toth-dark/90 via-toth-dark/30 to-transparent flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-1">
+                Seguro Empresarial
+              </h3>
+              <p class="card-reveal text-gray-200 text-sm">
+                Prédios, máquinas e estoques sob máxima segurança.
+              </p>
+              <a
+                href="pages/seguro-empresarial.php/index.html"
+                class="inline-block px-4 py-2 bg-toth-gold text-white text-xs font-semibold rounded-lg hover:bg-white hover:text-toth-dark transition w-max"
+                >Saber Mais</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FAQ COMPLETO ====== -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span
+            class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+            >Tire suas dúvidas</span
+          >
+          <h2 class="text-3xl md:text-4xl font-extrabold text-toth-dark mt-2">
+            Perguntas Frequentes sobre Consórcios
+          </h2>
+          <div class="w-16 h-1 bg-toth-gold rounded-full mx-auto mt-4"></div>
+        </div>
+        <div class="space-y-4">
+          <details
+            class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden group"
+          >
+            <summary
+              class="flex justify-between items-center p-6 cursor-pointer font-bold text-toth-dark hover:text-toth-gold transition-colors"
+            >
+              Vale mesmo a pena trocar financiamento por consórcio?
+              <i class="fa fa-chevron-down chevron text-toth-gold"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-500 leading-relaxed text-sm">
+              Na grande maioria dos casos que não exigem o bem para "ontem",
+              <strong>sim</strong>. O financiamento acumula juros compostos
+              altíssimos (ex: CET de 11%+ ao ano no imobiliário). O Consórcio
+              tem ZERO juros, apenas uma taxa de administração fixa e
+              pulverizada, barateando a compra final em 50% ou mais comparado ao
+              financiamento.
+            </div>
+          </details>
+          <details
+            class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden group"
+          >
+            <summary
+              class="flex justify-between items-center p-6 cursor-pointer font-bold text-toth-dark hover:text-toth-gold transition-colors"
+            >
+              O que é Lance Embutido e Lance Fixo?
+              <i class="fa fa-chevron-down chevron text-toth-gold"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-500 leading-relaxed text-sm">
+              O <strong>Lance Embutido</strong> permite que você utilize uma %
+              (geralmente até 30%) da sua própria carta de crédito aprovada como
+              se fosse dinheiro vivo para dar o seu lance, reduzindo do valor
+              final. O saldo continua garantindo o bem. O
+              <strong>Lance Fixo</strong> é onde todos ofertam a mesma %
+              pré-definida e o sorteio ocorre entre eles. Tudo faz parte do jogo
+              matemático que avaliamos mensalmente pra você.
+            </div>
+          </details>
+          <details
+            class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden group"
+          >
+            <summary
+              class="flex justify-between items-center p-6 cursor-pointer font-bold text-toth-dark hover:text-toth-gold transition-colors"
+            >
+              Existe certeza ou data exata para eu ser contemplado?
+              <i class="fa fa-chevron-down chevron text-toth-gold"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-500 leading-relaxed text-sm">
+              <strong
+                >Não existe data exata nem garantia oficial do sistema.</strong
+              >
+              Quem vende "consórcio com contemplação garantida em X meses"
+              comete estelionato. Nós da Toth vendemos probabilidade matemática:
+              analisamos as métricas, últimos 6 meses de lances passados e
+              encontramos os buracos em administradoras sólidas para que a sua
+              oferta em lance seja estatisticamente vencedora mais rápido.
+            </div>
+          </details>
+          <details
+            class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden group"
+          >
+            <summary
+              class="flex justify-between items-center p-6 cursor-pointer font-bold text-toth-dark hover:text-toth-gold transition-colors"
+            >
+              E se eu precisar cancelar ou parar de pagar?
+              <i class="fa fa-chevron-down chevron text-toth-gold"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-500 leading-relaxed text-sm">
+              Se você parar de pagar ou solicitar exclusão antes de ser
+              contemplado, seu nome concorre aos sorteios de cancelados,
+              garantindo assim que você receba seu dinheiro de volta ao final
+              das operações ou quando sorteado, abatendo multas contratuais
+              leves (variáveis por administradora).
+            </div>
+          </details>
+          <details
+            class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden group"
+          >
+            <summary
+              class="flex justify-between items-center p-6 cursor-pointer font-bold text-toth-dark hover:text-toth-gold transition-colors"
+            >
+              A Toth cobra alguma taxa sobre a carta de crédito se eu fechar?
+              <i class="fa fa-chevron-down chevron text-toth-gold"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-500 leading-relaxed text-sm">
+              <strong>Não!</strong> Nosso serviço de matchmaker e prospecção é
+              pago pela própria administradora parceira. Você paga para o banco
+              consorciador as mesmas coisas, nós não te oneramos nenhum centavo
+              por nossa assessoria de inteligência competitiva e lances.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CTA FINAL ====== -->
+    <section class="py-20 bg-toth-dark relative overflow-hidden">
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-toth-gold rounded-full filter blur-[100px] opacity-20"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-80 h-80 bg-white rounded-full filter blur-[120px] opacity-5"
+      ></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h2
+          class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight"
+        >
+          O primeiro passo do seu
+          <span class="text-gradient-gold">próximo grande projeto.</span>
+        </h2>
+        <p class="text-xl text-gray-400 mb-10">
+          Chame agora mesmo e simule as parcelas de acordo com a sua realidade
+          financeira, sem burocracias pesadas.
+        </p>
+        <a
+          href="https://wa.me/5541997127102"
+          class="btn-gold inline-flex items-center gap-3 text-white px-10 py-5 rounded-full font-bold text-lg"
+        >
+          <i class="fa-brands fa-whatsapp text-2xl"></i> Fazer Simulação
+        </a>
+      </div>
+    </section>
+
+    <!-- ====== FOOTER REUTILIZADO ====== -->
+    <toth-footer base="./"></toth-footer>
+
+    <script src="components.js"></script>
+    <script>
+      // FAQ Accordion logic
+      document.querySelectorAll("details").forEach((d) => {
+        d.addEventListener("toggle", () => {
+          if (d.querySelector(".chevron")) {
+            const chevron = d.querySelector(".chevron");
+            chevron.style.transform = d.open ? "rotate(180deg)" : "";
+          }
+          if (d.open) {
+            document.querySelectorAll("details").forEach((other) => {
+              if (other !== d) {
+                other.open = false;
+                if (other.querySelector(".chevron"))
+                  other.querySelector(".chevron").style.transform = "";
+              }
+            });
+          }
+        });
+      });
+
+      // Counter Animation
+      const counters = document.querySelectorAll(".counter");
+      let animated = false;
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !animated) {
+              animated = true;
+              counters.forEach((counter) => {
+                const target = +counter.dataset.target;
+                if (target === 0) return; // Ignore if 0
+                const duration = 2000;
+                const step = Math.max(1, Math.floor(target / (duration / 16)));
+                let current = 0;
+                const tick = () => {
+                  current += step;
+                  if (current >= target) {
+                    counter.textContent =
+                      target.toLocaleString("pt-BR") + (target > 50 ? "+" : "");
+                    return;
+                  }
+                  counter.textContent = current.toLocaleString("pt-BR");
+                  requestAnimationFrame(tick);
+                };
+                tick();
+              });
+            }
+          });
+        },
+        { threshold: 0.3 },
+      );
+      counters.forEach((c) => observer.observe(c));
+    </script>
+  </body>
+</html>

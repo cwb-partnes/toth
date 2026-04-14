@@ -1,24 +1,1175 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-br" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=pages/index.php/index.html" />
-    <title>Toth Corretora - Redirecionando...</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Toth Corretora de Seguros | Seguros Auto, Vida, Residencial e Empresarial
+    </title>
+    <meta
+      name="description"
+      content="A Toth Corretora de Seguros oferece soluções completas em seguros auto, vida, residencial e empresarial. Atendimento rápido pelo WhatsApp."
+    />
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              toth: {
+                gold: "#c29b3a",
+                goldLight: "#d4b363",
+                dark: "#040404",
+                gray: "#111",
+                light: "#f8f9fa",
+              },
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
   </head>
   <body
-    style="
-      background-color: #040404;
-      color: #c29b3a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: sans-serif;
-    "
+    class="font-sans text-gray-800 bg-white antialiased selection:bg-toth-gold selection:text-white"
   >
+    <!-- WhatsApp Float -->
+    <a
+      href="https://api.whatsapp.com/send?phone=5541997127102&text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20seguros%20da%20Toth%20Corretora."
+      target="_blank"
+      class="fixed bottom-6 right-6 z-50 block hover:scale-110 active:scale-95 transition-transform drop-shadow-2xl"
+    >
+      <img class="w-16 h-16" src="/images/whatsapp.png" alt="WhatsApp" />
+    </a>
+
+    <!-- ====== SHARED NAVBAR ====== -->
+    <toth-navbar active="home" base="/"></toth-navbar>
+
+    <!-- ===== HERO SLIDER ===== -->
+    <section
+      class="hero-slider relative"
+      id="heroSlider"
+      style="
+        background:
+          linear-gradient(
+            135deg,
+            rgba(4, 4, 4, 0.7) 0%,
+            rgba(26, 26, 26, 0.6) 60%,
+            rgba(4, 4, 4, 0.7) 100%
+          ),
+          url(&quot;/images/hero_home_bg.png&quot;);
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div class="hero-slides" id="heroSlides">
+        <!-- Slide 1 -->
+        <div class="hero-slide">
+          <div class="overlay"></div>
+          <img
+            src="/images/home_familia_1.png"
+            alt="Proteção completa"
+            class="hero-img"
+          />
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content">
+              <span
+                class="inline-block py-1 px-3 rounded-full bg-toth-gold/20 border border-toth-gold/30 text-toth-gold text-xs font-bold tracking-widest uppercase mb-5"
+                >Tranquilidade Garantida</span
+              >
+              <h1
+                class="text-3xl md:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-tight mb-5 tracking-tight"
+              >
+                Proteção Completa<br />para Você e
+                <span class="text-gradient-gold">Sua Família</span>
+              </h1>
+              <p
+                class="text-base md:text-lg text-gray-300 mb-8 leading-relaxed font-light max-w-lg"
+              >
+                Oferecemos soluções personalizadas em seguros auto, vida,
+                residencial e empresarial, garantindo tranquilidade e o melhor
+                custo-benefício.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="https://api.whatsapp.com/send?phone=5541997127102"
+                  class="btn-gold text-white px-7 py-3.5 rounded-lg font-bold text-sm shadow-[0_0_20px_rgba(194,155,58,.3)]"
+                  >Conheça Nossos Seguros</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 (Saúde) -->
+        <div class="hero-slide">
+          <div class="overlay"></div>
+          <img
+            src="/images/home_familia_2.png"
+            alt="Plano de Saúde para a Família"
+            class="hero-img"
+          />
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content">
+              <span
+                class="inline-block py-1 px-3 rounded-full bg-toth-gold/20 border border-toth-gold/30 text-toth-gold text-xs font-bold tracking-widest uppercase mb-5"
+                >Especialistas em Saúde</span
+              >
+              <h1
+                class="text-3xl md:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-tight mb-5 tracking-tight"
+              >
+                O Melhor Plano de Saúde<br />para a
+                <span class="text-gradient-gold">Sua Família</span>
+              </h1>
+              <p
+                class="text-base md:text-lg text-gray-300 mb-8 leading-relaxed font-light max-w-lg"
+              >
+                Trabalhamos com as maiores operadoras do Brasil para garantir
+                infraestrutura de ponta e proteção financeira na hora que você
+                mais precisar.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="/plano-de-saude"
+                  class="btn-gold text-white px-7 py-3.5 rounded-lg font-bold text-sm shadow-[0_0_20px_rgba(194,155,58,.3)]"
+                  >Ver Planos</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+          <div class="overlay"></div>
+          <img
+            src="/images/slide2-mulher.png"
+            alt="Atendimento especializado"
+            class="hero-img"
+          />
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content">
+              <span
+                class="inline-block py-1 px-3 rounded-full bg-toth-gold/20 border border-toth-gold/30 text-toth-gold text-xs font-bold tracking-widest uppercase mb-5"
+                >Atendimento Ágil</span
+              >
+              <h1
+                class="text-3xl md:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-tight mb-5 tracking-tight"
+              >
+                Seguro Auto, Vida e<br />Residencial com
+                <span class="text-gradient-gold">Rapidez</span>
+              </h1>
+              <p
+                class="text-base md:text-lg text-gray-300 mb-8 leading-relaxed font-light max-w-lg"
+              >
+                Conte com a experiência da Toth Corretora para contratar o
+                seguro ideal, com suporte especializado e atendimento ágil pelo
+                WhatsApp.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="https://api.whatsapp.com/send?phone=5541997127102"
+                  target="_blank"
+                  class="btn-gold text-white px-7 py-3.5 rounded-lg font-bold text-sm shadow-[0_0_20px_rgba(194,155,58,.3)]"
+                  >Falar com um Especialista</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="hero-slide">
+          <div class="overlay"></div>
+          <img
+            src="/images/home_empresa.png"
+            alt="Seguro empresarial"
+            class="hero-img"
+          />
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content">
+              <span
+                class="inline-block py-1 px-3 rounded-full bg-toth-gold/20 border border-toth-gold/30 text-toth-gold text-xs font-bold tracking-widest uppercase mb-5"
+                >Soluções Empresariais</span
+              >
+              <h1
+                class="text-3xl md:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-tight mb-5 tracking-tight"
+              >
+                Seguros Empresariais<br /><span class="text-gradient-gold"
+                  >Sob Medida</span
+                >
+                para Você
+              </h1>
+              <p
+                class="text-base md:text-lg text-gray-300 mb-8 leading-relaxed font-light max-w-lg"
+              >
+                Proteja sua empresa contra imprevistos com seguros completos,
+                desenvolvidos para garantir continuidade e estabilidade
+                financeira.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="https://api.whatsapp.com/send?phone=5541997127102"
+                  class="btn-gold text-white px-7 py-3.5 rounded-lg font-bold text-sm shadow-[0_0_20px_rgba(194,155,58,.3)]"
+                  >Solicitar Cotação</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-dots" id="sliderDots">
+        <button class="active" onclick="goSlide(0)"></button>
+        <button onclick="goSlide(1)"></button>
+        <button onclick="goSlide(2)"></button>
+        <button onclick="goSlide(3)"></button>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES TABS ===== -->
+    <section id="services" class="py-20 bg-toth-light relative -mt-8 z-30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-toth-dark mb-4">
+            Mais do que seguros,<br /><span class="text-gradient-gold"
+              >tranquilidade</span
+            >
+            em todas as áreas
+          </h2>
+          <div class="w-16 h-1 bg-toth-gold mx-auto rounded-full mb-8"></div>
+
+          <div
+            class="inline-flex rounded-xl p-1 bg-gray-200 border border-gray-100 shadow-inner mb-6 mx-auto"
+          >
+            <button
+              id="btn-voce"
+              onclick="switchTab('voce')"
+              class="tab-btn active-tab-btn relative px-6 py-2.5 text-sm font-bold text-gray-900 bg-white rounded-lg shadow-sm transition-all focus:outline-none"
+            >
+              Para Você e Família
+            </button>
+            <button
+              id="btn-empresa"
+              onclick="switchTab('empresa')"
+              class="tab-btn px-6 py-2.5 text-sm font-medium text-gray-600 rounded-lg hover:text-gray-900 transition-all focus:outline-none"
+            >
+              Para Empresas
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab: VOCÊ -->
+        <div id="tab-voce" class="tab-content block animate-fade-in">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            <a
+              href="/seguro-auto"
+              class="service-card group block bg-white rounded-2xl p-7 shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 hover:border-toth-goldLight transition-all"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-xl bg-toth-light flex items-center justify-center text-2xl text-toth-gold mb-5 shadow-sm group-hover:scale-110 transition-transform"
+              >
+                <i class="fa fa-car"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Seguro Auto</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Proteção completa para seu veículo contra colisões, furtos e
+                danos a terceiros.
+              </p>
+              <span
+                class="text-toth-gold text-xs font-bold uppercase tracking-wider group-hover:underline"
+                >Saiba Mais <i class="fa fa-arrow-right ml-1"></i
+              ></span>
+            </a>
+            <a
+              href="/seguro-residencial"
+              class="service-card group block bg-white rounded-2xl p-7 shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 hover:border-toth-goldLight transition-all"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-xl bg-toth-light flex items-center justify-center text-2xl text-toth-gold mb-5 shadow-sm group-hover:scale-110 transition-transform"
+              >
+                <i class="fa fa-home"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Seguro Residencial
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Garanta a segurança da sua casa contra incêndios, vendavais e
+                danos elétricos.
+              </p>
+              <span
+                class="text-toth-gold text-xs font-bold uppercase tracking-wider group-hover:underline"
+                >Saiba Mais <i class="fa fa-arrow-right ml-1"></i
+              ></span>
+            </a>
+            <a
+              href="/seguro-de-vida"
+              class="service-card group block bg-white rounded-2xl p-7 shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 hover:border-toth-goldLight transition-all"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-xl bg-toth-light flex items-center justify-center text-2xl text-toth-gold mb-5 shadow-sm group-hover:scale-110 transition-transform"
+              >
+                <i class="fa fa-heart"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Seguro de Vida
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Apoio e planejamento financeiro para manter o padrão de vida de
+                quem você mais ama.
+              </p>
+              <span
+                class="text-toth-gold text-xs font-bold uppercase tracking-wider group-hover:underline"
+                >Saiba Mais <i class="fa fa-arrow-right ml-1"></i
+              ></span>
+            </a>
+            <a
+              href="/plano-de-saude"
+              class="service-card group block bg-white rounded-2xl p-7 shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 hover:border-toth-goldLight transition-all"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-xl bg-toth-light flex items-center justify-center text-2xl text-toth-gold mb-5 shadow-sm group-hover:scale-110 transition-transform"
+              >
+                <i class="fa fa-user-doctor"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Planos de Saúde
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Ampla cobertura e parceiros reconhecidos para a saúde e
+                bem-estar em todas as idades.
+              </p>
+              <span
+                class="text-toth-gold text-xs font-bold uppercase tracking-wider group-hover:underline"
+                >Saiba Mais <i class="fa fa-arrow-right ml-1"></i
+              ></span>
+            </a>
+            <a
+              href="/seguro-equipamentos"
+              class="service-card group block bg-white rounded-2xl p-7 shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 hover:border-toth-goldLight transition-all"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-xl bg-toth-light flex items-center justify-center text-2xl text-toth-gold mb-5 shadow-sm group-hover:scale-110 transition-transform"
+              >
+                <i class="fa fa-mobile-screen"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Equipamentos Portáteis
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Proteção contra roubo e quebra acidental de celulares, tablets,
+                câmeras e notebooks.
+              </p>
+              <span
+                class="text-toth-gold text-xs font-bold uppercase tracking-wider group-hover:underline"
+                >Saiba Mais <i class="fa fa-arrow-right ml-1"></i
+              ></span>
+            </a>
+            <a
+              href="/consorcios"
+              class="service-card group block bg-white rounded-2xl p-7 shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 hover:border-toth-goldLight transition-all"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-xl bg-toth-light flex items-center justify-center text-2xl text-toth-gold mb-5 shadow-sm group-hover:scale-110 transition-transform"
+              >
+                <i class="fa fa-house-circle-check"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Consórcios</h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Planejamento financeiro sem juros abusivos para comprar seu
+                imóvel ou trocar de veículo.
+              </p>
+              <span
+                class="text-toth-gold text-xs font-bold uppercase tracking-wider group-hover:underline"
+                >Saiba Mais <i class="fa fa-arrow-right ml-1"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tab: EMPRESA -->
+        <div id="tab-empresa" class="tab-content hidden animate-fade-in">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 justify-center"
+          >
+            <a
+              href="/seguro-empresarial"
+              class="service-card group block bg-white rounded-2xl p-7 shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 hover:border-toth-goldLight transition-all"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-xl bg-toth-light flex items-center justify-center text-2xl text-toth-gold mb-5 shadow-sm group-hover:scale-110 transition-transform"
+              >
+                <i class="fa fa-city"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Seguro Empresarial
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Mantenha a operação em dia cobrindo a estrutura física
+                (incêndio) e os bens da empresa.
+              </p>
+              <span
+                class="text-toth-gold text-xs font-bold uppercase tracking-wider group-hover:underline"
+                >Saiba Mais <i class="fa fa-arrow-right ml-1"></i
+              ></span>
+            </a>
+            <a
+              href="/responsabilidade-civil"
+              class="service-card group block bg-white rounded-2xl p-7 shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 hover:border-toth-goldLight transition-all"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-xl bg-toth-light flex items-center justify-center text-2xl text-toth-gold mb-5 shadow-sm group-hover:scale-110 transition-transform"
+              >
+                <i class="fa fa-scale-balanced"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Resp. Civil (RC)
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Defesa e indenizações contra danos a terceiros ocorridos durante
+                o fornecimento dos seus serviços.
+              </p>
+              <span
+                class="text-toth-gold text-xs font-bold uppercase tracking-wider group-hover:underline"
+                >Saiba Mais <i class="fa fa-arrow-right ml-1"></i
+              ></span>
+            </a>
+            <a
+              href="/seguro-de-pessoas"
+              class="service-card group block bg-white rounded-2xl p-7 shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 hover:border-toth-goldLight transition-all"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-xl bg-toth-light flex items-center justify-center text-2xl text-toth-gold mb-5 shadow-sm group-hover:scale-110 transition-transform"
+              >
+                <i class="fa fa-people-group"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Vida em Grupo
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Segurança corporativa para sócios e colaboradores, gerando valor
+                no pacote de benefícios (RH).
+              </p>
+              <span
+                class="text-toth-gold text-xs font-bold uppercase tracking-wider group-hover:underline"
+                >Saiba Mais <i class="fa fa-arrow-right ml-1"></i
+              ></span>
+            </a>
+            <a
+              href="/seguro-de-danos-patrimoniais"
+              class="service-card group block bg-white rounded-2xl p-7 shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 hover:border-toth-goldLight transition-all"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-xl bg-toth-light flex items-center justify-center text-2xl text-toth-gold mb-5 shadow-sm group-hover:scale-110 transition-transform"
+              >
+                <i class="fa fa-warehouse"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Danos Patrimoniais
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                Garantia para maquinários pesados, construção civil e indústrias
+                mediante intempéries e lucros cessantes.
+              </p>
+              <span
+                class="text-toth-gold text-xs font-bold uppercase tracking-wider group-hover:underline"
+                >Saiba Mais <i class="fa fa-arrow-right ml-1"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SIMULAÇÃO ===== -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+            Faça sua simulação agora mesmo
+          </h2>
+          <div class="w-16 h-1 bg-toth-gold mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="img-card relative rounded-2xl overflow-hidden shadow-lg h-72 cursor-pointer"
+          >
+            <img
+              src="/images/seguro-auto.jpg"
+              class="w-full h-full object-cover"
+              alt="Auto"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-toth-dark/90 via-toth-dark/30 to-transparent flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-1">Seguro Auto</h3>
+              <p class="card-reveal text-gray-200 text-sm">
+                Proteção contra roubos, colisões e danos a terceiros.
+              </p>
+              <a
+                href="https://toth.aggilizador.com.br/"
+                class="inline-block px-4 py-2 bg-toth-gold text-white text-xs font-semibold rounded-lg hover:bg-white hover:text-toth-dark transition w-max"
+                >Solicitar Cotação</a
+              >
+            </div>
+          </div>
+          <div
+            class="img-card relative rounded-2xl overflow-hidden shadow-lg h-72 cursor-pointer"
+          >
+            <img
+              src="/images/home_seguro_vida2.png"
+              class="w-full h-full object-cover"
+              alt="Vida"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-toth-dark/90 via-toth-dark/30 to-transparent flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-1">Seguro de Vida</h3>
+              <p class="card-reveal text-gray-200 text-sm">
+                Segurança financeira para você e família.
+              </p>
+              <a
+                href="https://toth.aggilizador.com.br/"
+                class="inline-block px-4 py-2 bg-toth-gold text-white text-xs font-semibold rounded-lg hover:bg-white hover:text-toth-dark transition w-max"
+                >Solicitar Cotação</a
+              >
+            </div>
+          </div>
+          <div
+            class="img-card relative rounded-2xl overflow-hidden shadow-lg h-72 cursor-pointer"
+          >
+            <img
+              src="/images/seguro-residencial.jpg"
+              class="w-full h-full object-cover"
+              alt="Residencial"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-toth-dark/90 via-toth-dark/30 to-transparent flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-1">
+                Seguro Residencial
+              </h3>
+              <p class="card-reveal text-gray-200 text-sm">
+                Proteja sua casa contra incêndios e roubos.
+              </p>
+              <a
+                href="https://toth.aggilizador.com.br/"
+                class="inline-block px-4 py-2 bg-toth-gold text-white text-xs font-semibold rounded-lg hover:bg-white hover:text-toth-dark transition w-max"
+                >Solicitar Cotação</a
+              >
+            </div>
+          </div>
+          <div
+            class="img-card relative rounded-2xl overflow-hidden shadow-lg h-72 cursor-pointer"
+          >
+            <img
+              src="/images/seguro-empresarial.jpg"
+              class="w-full h-full object-cover"
+              alt="Empresarial"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-toth-dark/90 via-toth-dark/30 to-transparent flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-1">
+                Seguro Empresarial
+              </h3>
+              <p class="card-reveal text-gray-200 text-sm">
+                Continuidade do negócio com segurança.
+              </p>
+              <a
+                href="https://toth.aggilizador.com.br/"
+                class="inline-block px-4 py-2 bg-toth-gold text-white text-xs font-semibold rounded-lg hover:bg-white hover:text-toth-dark transition w-max"
+                >Solicitar Cotação</a
+              >
+            </div>
+          </div>
+          <div
+            class="img-card relative rounded-2xl overflow-hidden shadow-lg h-72 cursor-pointer"
+          >
+            <img
+              src="/images/home_consorcio.png"
+              class="w-full h-full object-cover"
+              alt="Consórcios"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-toth-dark/90 via-toth-dark/30 to-transparent flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-1">Consórcios</h3>
+              <p class="card-reveal text-gray-200 text-sm">
+                Planejamento inteligente sem juros.
+              </p>
+              <a
+                href="https://api.whatsapp.com/send?phone=5541997127102"
+                class="inline-block px-4 py-2 bg-toth-gold text-white text-xs font-semibold rounded-lg hover:bg-white hover:text-toth-dark transition w-max"
+                >Falar com Consultor</a
+              >
+            </div>
+          </div>
+          <div
+            class="img-card relative rounded-2xl overflow-hidden shadow-lg h-72 cursor-pointer"
+          >
+            <img
+              src="/images/home_saude.png"
+              class="w-full h-full object-cover"
+              alt="Saúde"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-toth-dark/90 via-toth-dark/30 to-transparent flex flex-col justify-end p-6"
+            >
+              <h3 class="text-xl font-bold text-white mb-1">Planos de Saúde</h3>
+              <p class="card-reveal text-gray-200 text-sm">
+                Ampla rede credenciada e cobertura completa.
+              </p>
+              <a
+                href="https://api.whatsapp.com/send?phone=5541997127102"
+                class="inline-block px-4 py-2 bg-toth-gold text-white text-xs font-semibold rounded-lg hover:bg-white hover:text-toth-dark transition w-max"
+                >Falar com Consultor</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PLANOS DE SAÚDE ===== -->
+    <section class="py-20 bg-toth-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-14 items-center">
+          <div class="w-full lg:w-1/2 relative">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-toth-gold rounded-full blur-3xl opacity-20"
+            ></div>
+            <img
+              src="/images/home_plano_saude.png"
+              class="w-4/5 mx-auto relative z-10 drop-shadow-xl"
+              alt="Planos de Saúde"
+            />
+          </div>
+          <div class="w-full lg:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-toth-dark mb-5">
+              Planos de Saúde
+            </h2>
+            <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+              Ajudamos você a encontrar o plano ideal com segurança e
+              transparência, analisando seu perfil para indicar as melhores
+              opções.
+            </p>
+            <div class="space-y-3">
+              <details
+                class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                open
+              >
+                <summary
+                  class="flex justify-between items-center font-medium cursor-pointer p-5 text-gray-900 group-open:text-toth-gold transition"
+                >
+                  <span>Consultoria Especializada</span
+                  ><i class="fa fa-chevron-down text-sm chevron"></i>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 text-sm leading-relaxed">
+                  Analisamos seu perfil e apresentamos as melhores opções de
+                  planos disponíveis no mercado, garantindo a escolha mais
+                  adequada.
+                </div>
+              </details>
+              <details
+                class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+              >
+                <summary
+                  class="flex justify-between items-center font-medium cursor-pointer p-5 text-gray-900 group-open:text-toth-gold transition"
+                >
+                  <span>Principais Operadoras</span
+                  ><i class="fa fa-chevron-down text-sm chevron"></i>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 text-sm leading-relaxed">
+                  Operadoras reconhecidas nacionalmente com ampla rede de
+                  hospitais, clínicas e profissionais.
+                </div>
+              </details>
+              <details
+                class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+              >
+                <summary
+                  class="flex justify-between items-center font-medium cursor-pointer p-5 text-gray-900 group-open:text-toth-gold transition"
+                >
+                  <span>Planos para Todos os Perfis</span
+                  ><i class="fa fa-chevron-down text-sm chevron"></i>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 text-sm leading-relaxed">
+                  Individuais, familiares e empresariais com diferentes níveis
+                  de cobertura.
+                </div>
+              </details>
+              <details
+                class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+              >
+                <summary
+                  class="flex justify-between items-center font-medium cursor-pointer p-5 text-gray-900 group-open:text-toth-gold transition"
+                >
+                  <span>Suporte na Contratação</span
+                  ><i class="fa fa-chevron-down text-sm chevron"></i>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 text-sm leading-relaxed">
+                  Acompanhamos todo o processo esclarecendo dúvidas com
+                  atendimento rápido e seguro.
+                </div>
+              </details>
+            </div>
+            <a
+              href="https://wa.me/5541997127102"
+              target="_blank"
+              class="btn-gold inline-block text-white px-6 py-3 rounded-lg font-semibold text-sm mt-8 shadow-lg"
+              >Falar com um Especialista</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PARCEIROS ===== -->
+    <section class="py-14 bg-white border-y border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3
+          class="text-center text-xs font-bold tracking-widest text-gray-400 uppercase mb-10"
+        >
+          Parceiros & Seguradoras
+        </h3>
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-10">
+          <img
+            src="/images/parceiros/amil-dental.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="Amil"
+          />
+          <img
+            src="/images/parceiros/bradesco-dental.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="Bradesco"
+          />
+          <img
+            src="/images/parceiros/dental-uni.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="Dental Uni"
+          />
+          <img
+            src="/images/parceiros/hapvida.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="Hapvida"
+          />
+          <img
+            src="/images/parceiros/medsenior.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="MedSênior"
+          />
+          <img
+            src="/images/parceiros/medsul.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="MedSul"
+          />
+          <img
+            src="/images/parceiros/metlife.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="MetLife"
+          />
+          <img
+            src="/images/parceiros/nossa-saude.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="Nossa Saúde"
+          />
+          <img
+            src="/images/parceiros/unimed-odonto.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="Unimed"
+          />
+          <img
+            src="/images/parceiros/odontoprev.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="Odontoprev"
+          />
+          <img
+            src="/images/parceiros/omint.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="Omint"
+          />
+          <img
+            src="/images/parceiros/parana-clinicas.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="Paraná Clínicas"
+          />
+          <img
+            src="/images/parceiros/porto-seguro-odonto.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="Porto"
+          />
+          <img
+            src="/images/parceiros/select.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="Select"
+          />
+          <img
+            src="/images/parceiros/sulamerica-odonto.png"
+            class="partner-logo h-14 md:h-16 object-contain"
+            alt="SulAmérica"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== O QUE DIZEM NOSSOS CLIENTES (PROVA SOCIAL) ===== -->
+    <section
+      class="py-20 bg-toth-light border-y border-gray-100 relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-toth-gold rounded-full blur-[100px] opacity-10"
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span
+            class="inline-block py-1 px-3 rounded-full bg-toth-gold/20 border border-toth-gold/30 text-toth-gold text-xs font-bold tracking-widest uppercase mb-3"
+            >Reconhecimento</span
+          >
+          <h2 class="text-3xl md:text-4xl font-extrabold text-toth-dark mb-4">
+            A escolha de quem busca
+            <span class="text-gradient-gold">Segurança</span>
+          </h2>
+          <div class="w-16 h-1 bg-toth-gold mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card de Depoimento 1 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-[0_5px_20px_rgb(0,0,0,0.03)] border border-gray-100 relative"
+          >
+            <i
+              class="fa fa-quote-left text-4xl text-gray-100 absolute top-6 right-6"
+            ></i>
+            <div class="flex text-amber-400 text-sm mb-4">
+              <i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed mb-6">
+              "Atendimento super rápido e claro quando precisei acionar o meu
+              Seguro Auto. Foi a melhor transição de corretora que fiz.
+              Recomendo!"
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold overflow-hidden"
+              >
+                <img
+                  src="https://i.pravatar.cc/100?img=11"
+                  alt="Roberto Silas"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 text-sm">Roberto Silas</h4>
+                <p class="text-xs text-gray-500">Curitiba, PR</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card de Depoimento 2 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-[0_5px_20px_rgb(0,0,0,0.03)] border border-gray-100 relative"
+          >
+            <i
+              class="fa fa-quote-left text-4xl text-gray-100 absolute top-6 right-6"
+            ></i>
+            <div class="flex text-amber-400 text-sm mb-4">
+              <i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed mb-6">
+              "Eles ajudaram na escolha do Plano de Saúde perfeito para minha
+              família com muita transparência. O suporte fez a diferença."
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold overflow-hidden"
+              >
+                <img
+                  src="https://i.pravatar.cc/100?img=5"
+                  alt="Mariana Costa"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 text-sm">Mariana Costa</h4>
+                <p class="text-xs text-gray-500">São Paulo, SP</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card de Depoimento 3 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-[0_5px_20px_rgb(0,0,0,0.03)] border border-gray-100 relative"
+          >
+            <i
+              class="fa fa-quote-left text-4xl text-gray-100 absolute top-6 right-6"
+            ></i>
+            <div class="flex text-amber-400 text-sm mb-4">
+              <i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i
+              ><i class="fa fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-600 italic leading-relaxed mb-6">
+              "Fechamos o Seguro Empresarial do nosso galpão em tempo recorde e
+              excelente preço. A consultoria ajudou nossa decisão final."
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold overflow-hidden"
+              >
+                <img
+                  src="https://i.pravatar.cc/100?img=53"
+                  alt="Carlos Mendes"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 text-sm">Carlos Mendes</h4>
+                <p class="text-xs text-gray-500">Rio de Janeiro, RJ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DIFERENCIAIS ===== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col-reverse lg:flex-row gap-14 items-center">
+          <div class="w-full lg:w-2/3">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-toth-dark mb-5">
+              Atendimento Especializado e Suporte Dedicado
+            </h2>
+            <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+              Na Toth, você conta com atendimento próximo e especializado para
+              as melhores soluções do mercado.
+            </p>
+            <div class="grid gap-5">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-toth-light rounded-full flex items-center justify-center text-toth-gold border border-gray-100"
+                >
+                  <i class="fa fa-gem"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-base font-bold text-gray-900">
+                    Nossos Valores
+                  </h4>
+                  <p class="mt-1 text-gray-500 text-sm">
+                    Ética, transparência e compromisso com a proteção em todas
+                    as etapas.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-toth-light rounded-full flex items-center justify-center text-toth-gold border border-gray-100"
+                >
+                  <i class="fa fa-users"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-base font-bold text-gray-900">
+                    Nossa Equipe
+                  </h4>
+                  <p class="mt-1 text-gray-500 text-sm">
+                    Profissionais qualificados prontos para formular a melhor
+                    solução.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-toth-light rounded-full flex items-center justify-center text-toth-gold border border-gray-100"
+                >
+                  <i class="fa fa-bullseye"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-base font-bold text-gray-900">
+                    Nossa Missão
+                  </h4>
+                  <p class="mt-1 text-gray-500 text-sm">
+                    Segurança, tranquilidade e confiança com atendimento próximo
+                    e sob medida.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/5541997127102"
+              target="_blank"
+              class="btn-gold inline-block text-white px-6 py-3 rounded-lg font-semibold text-sm mt-8 shadow-lg"
+              >Falar com um Especialista</a
+            >
+          </div>
+          <div class="w-full lg:w-1/3">
+            <img
+              src="/images/empresario.png"
+              class="w-4/5 mx-auto"
+              alt="Especialista"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="border-t border-gray-200 bg-gray-50 py-14">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="contact-card flex flex-col items-center md:items-start p-6 bg-white rounded-2xl shadow-sm border border-gray-100"
+          >
+            <div
+              class="w-12 h-12 flex justify-center items-center bg-toth-gold/10 text-toth-gold rounded-full mb-4 text-xl"
+            >
+              <i class="fa fa-phone"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Contato Direto</h3>
+            <p class="text-gray-600">
+              <a href="tel:4132055486" class="hover:text-toth-gold transition"
+                >(41) 3205-5486</a
+              >
+            </p>
+            <p class="text-gray-600">
+              <a
+                href="https://wa.me/5541997127102"
+                class="hover:text-toth-gold transition"
+                >(41) 99712-7102</a
+              >
+            </p>
+          </div>
+          <div
+            class="contact-card flex flex-col items-center md:items-start p-6 bg-white rounded-2xl shadow-sm border border-gray-100"
+          >
+            <div
+              class="w-12 h-12 flex justify-center items-center bg-toth-gold/10 text-toth-gold rounded-full mb-4 text-xl"
+            >
+              <i class="fa fa-envelope"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Email</h3>
+            <p class="text-gray-600 text-sm break-all">
+              <a
+                href="mailto:atendimento@tothcorretoradeseguros.com.br"
+                class="hover:text-toth-gold transition"
+                >atendimento@tothcorretoradeseguros.com.br</a
+              >
+            </p>
+          </div>
+          <div
+            class="contact-card flex flex-col items-center md:items-start p-6 bg-white rounded-2xl shadow-sm border border-gray-100"
+          >
+            <div
+              class="w-12 h-12 flex justify-center items-center bg-toth-gold/10 text-toth-gold rounded-full mb-4 text-xl"
+            >
+              <i class="fa fa-calendar"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Horário</h3>
+            <p class="text-gray-600">
+              Segunda a Sexta<br /><span class="font-medium"
+                >08:00 às 18:00</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <toth-footer base="/" class="block"></toth-footer>
+
+    <script src="/components.js"></script>
+
+    <!-- Slider JS -->
     <script>
-      window.location.href = "pages/index.php/index.html";
+      let current = 0;
+      const total = 4;
+      let timer;
+      function goSlide(n) {
+        current = n;
+        document.getElementById("heroSlides").style.transform =
+          "translateX(-" + current * 100 + "%)";
+        document
+          .querySelectorAll("#sliderDots button")
+          .forEach((d, i) => d.classList.toggle("active", i === current));
+        resetTimer();
+      }
+      function nextSlide() {
+        goSlide((current + 1) % total);
+      }
+      function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(nextSlide, 5000);
+      }
+      resetTimer();
     </script>
-    <h2>Carregando a página inicial...</h2>
+    <!-- Script UI -->
+    <style>
+      .animate-fade-in {
+        animation: fadeIn 0.4s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .active-tab-btn {
+        background-color: white;
+        color: #111;
+        font-weight: bold;
+        border: 1px solid #d1d5db;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <script>
+      function switchTab(target) {
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((el) => el.classList.add("hidden"));
+        document.getElementById("tab-" + target).classList.remove("hidden");
+        document.querySelectorAll(".tab-btn").forEach((btn) => {
+          btn.classList.remove(
+            "active-tab-btn",
+            "bg-white",
+            "text-gray-900",
+            "shadow-sm",
+            "font-bold",
+          );
+          btn.classList.add("text-gray-600", "font-medium");
+          btn.style.border = "none";
+        });
+        const activeBtn = document.getElementById("btn-" + target);
+        activeBtn.classList.add(
+          "active-tab-btn",
+          "bg-white",
+          "text-gray-900",
+          "shadow-sm",
+          "font-bold",
+        );
+        activeBtn.classList.remove("text-gray-600", "font-medium");
+      }
+    </script>
   </body>
 </html>

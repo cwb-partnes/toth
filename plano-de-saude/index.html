@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planos de Saúde | Toth Corretora de Seguros</title>
+    <meta
+      name="description"
+      content="A Toth Corretora oferece os melhores planos de saúde do mercado para você, sua família ou empresa. Consulte opções com Unimed, Amil, SulAmérica e Bradesco Saúde."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { "toth-gold": "#c29b3a", "toth-dark": "#040404" },
+            fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+
+    <!-- Font Awesome & Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .service-hero {
+        background:
+          linear-gradient(
+            135deg,
+            rgba(4, 4, 4, 0.6) 0%,
+            rgba(26, 26, 26, 0.6) 60%,
+            rgba(4, 4, 4, 0.6) 100%
+          ),
+          url("/images/hero_saude_bg.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+      }
+      .gold-divider {
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #c29b3a, #d4b363);
+        border-radius: 9999px;
+      }
+      .wa-float {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 999;
+        background: #25d366;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .wa-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+      }
+
+      /* Card Hover Effects */
+      .plan-card {
+        transition: all 0.4s ease;
+      }
+      .plan-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      .plan-card img {
+        transition: transform 0.6s ease;
+      }
+      .plan-card:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Hover Partner Band from Auto */
+      .partner-logo-text {
+        color: #9ca3af;
+        transition: all 0.4s ease;
+        filter: grayscale(100%);
+        opacity: 0.6;
+      }
+      .partner-logo-text:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      .brand-unimed:hover {
+        color: #00995d;
+      }
+      .brand-amil:hover {
+        color: #e8005a;
+      }
+      .brand-bradesco:hover {
+        color: #cc092f;
+      }
+      .brand-sulamerica:hover {
+        color: #005a9c;
+      }
+      .brand-gndi:hover {
+        color: #0072ce;
+      }
+
+      /* Accordion */
+      .toth-accordion summary {
+        list-style: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 1.5rem;
+        border-radius: 0.75rem;
+        background: #f9f9f9;
+        font-weight: 600;
+        color: #1a1a1a;
+        transition: all 0.25s;
+        user-select: none;
+        border: 1px solid #eee;
+      }
+      .toth-accordion summary::-webkit-details-marker {
+        display: none;
+      }
+      .toth-accordion details[open] summary {
+        color: #c29b3a;
+        background: rgba(194, 155, 58, 0.05);
+        border-color: rgba(194, 155, 58, 0.2);
+        border-radius: 0.75rem 0.75rem 0 0;
+      }
+      .toth-accordion summary .chevron {
+        transition: transform 0.3s;
+      }
+      .toth-accordion details[open] summary .chevron {
+        transform: rotate(180deg);
+      }
+      .toth-accordion .panel-body {
+        border: 1px solid rgba(194, 155, 58, 0.2);
+        border-top: none;
+        border-radius: 0 0 0.75rem 0.75rem;
+        padding: 1.25rem 1.5rem;
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- WhatsApp Float -->
+    <a
+      href="https://wa.me/5541997127102?text=Olá,%20gostaria%20de%20conversar%20sobre%20Planos%20de%20Saúde."
+      target="_blank"
+      class="wa-float"
+    >
+      <i class="fa-brands fa-whatsapp text-2xl text-white"></i>
+    </a>
+
+    <!-- ====== SHARED NAVBAR ====== -->
+    <toth-navbar active="seguros-e-mais" base="/"></toth-navbar>
+
+    <!-- ====== 1. PAGE HERO (CONVERSION) ====== -->
+    <section class="service-hero py-28 lg:py-40">
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <span
+            class="inline-block py-1 px-3 rounded-full bg-toth-gold/20 text-toth-gold font-bold text-sm tracking-wider mb-4 border border-toth-gold/30"
+          >
+            ESPECIALISTAS EM SAÚDE
+          </span>
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6"
+          >
+            A tranquilidade que
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-toth-gold to-[#f0e6d2]"
+              >você e sua família</span
+            >
+            merecem.
+          </h1>
+          <p
+            class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl leading-relaxed"
+          >
+            Ter um plano de saúde não é um luxo, é a garantia de que, nos
+            momentos mais difíceis, você terá a melhor infraestrutura médica,
+            sem surpresas financeiras e sem filas de espera.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="https://wa.me/5541997127102?text=Olá,%20gostaria%20de%20uma%20cotação%20para%20Plano%20de%20Saúde."
+              target="_blank"
+              class="bg-toth-gold hover:bg-[#d4b363] text-toth-dark font-bold py-4 px-8 rounded-xl transition duration-300 text-center text-lg shadow-xl shadow-toth-gold/20 flex items-center justify-center gap-3"
+            >
+              Falar com um Consultor
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+            </a>
+            <a
+              href="#tabela"
+              class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 text-center text-lg"
+            >
+              Ver Modalidades
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 2. WHY HAVE A PLAN? (BENEFITS) ====== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-toth-dark mb-4">
+            Por que investir na sua Saúde?
+          </h2>
+          <div class="gold-divider mx-auto mb-6"></div>
+          <p class="text-gray-600 text-lg">
+            A saúde pública e as clínicas populares podem resolver o básico, mas
+            quando a urgência bater à porta, você vai desejar ter tomado essa
+            decisão.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Item 1 -->
+          <div
+            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 relative overflow-hidden group"
+          >
+            <div
+              class="w-14 h-14 bg-toth-dark text-toth-gold rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg transform group-hover:-translate-y-2 transition duration-300"
+            >
+              <i class="fa-solid fa-hospital"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Infraestrutura de Ponta
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Acesso irrestrito aos melhores hospitais, laboratórios modernos e
+              quartos privativos (caso você escolha as melhores acomodações).
+            </p>
+          </div>
+          <!-- Item 2 -->
+          <div
+            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 relative overflow-hidden group"
+          >
+            <div
+              class="w-14 h-14 bg-toth-dark text-toth-gold rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg transform group-hover:-translate-y-2 transition duration-300"
+            >
+              <i class="fa-solid fa-user-clock"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Agilidade no Atendimento
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Você não precisa esperar meses por um especialista. O agendamento
+              rápido te garante diagnósticos precoces, fundamentais para salvar
+              vidas.
+            </p>
+          </div>
+          <!-- Item 3 -->
+          <div
+            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 relative overflow-hidden group"
+          >
+            <div
+              class="w-14 h-14 bg-toth-dark text-toth-gold rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg transform group-hover:-translate-y-2 transition duration-300"
+            >
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Segurança Financeira
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Internamentos por Covid ou cirurgias de apêndice podem custar
+              dezenas de milhares de reais na rede particular. O plano blinda
+              seu patrimônio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 3. MODALIDADES DE PLANOS (CARDS COM IMAGENS AI) ====== -->
+    <section id="tabela" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6"
+        >
+          <div class="max-w-2xl">
+            <span
+              class="text-toth-gold font-bold tracking-widest text-sm uppercase mb-2 block"
+              >Portfólio</span
+            >
+            <h2 class="text-3xl md:text-4xl font-extrabold text-toth-dark mb-4">
+              Planos desenhados para o seu momento
+            </h2>
+            <div class="gold-divider"></div>
+          </div>
+          <a
+            href="/contato"
+            class="text-toth-dark font-semibold border-b-2 border-toth-gold pb-1 hover:text-toth-gold transition inline-flex items-center gap-2"
+          >
+            Precisa de ajuda para escolher? <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card: Familiar -->
+          <div
+            class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 plan-card"
+          >
+            <div class="h-56 overflow-hidden relative">
+              <img
+                src="/images/saude_familia.png"
+                alt="Plano de Saúde Familiar"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6"
+              >
+                <span
+                  class="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >Mais Procurado</span
+                >
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Plano Familiar
+              </h3>
+              <p class="text-gray-500 mb-6 text-sm">
+                A partir de 2 titulares (casal) ou titular e dependentes
+                diretos.
+              </p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center gap-3 text-gray-700">
+                  <i class="fa-solid fa-check text-toth-gold"></i> Opções de
+                  obstetrícia (Parto)
+                </li>
+                <li class="flex items-center gap-3 text-gray-700">
+                  <i class="fa-solid fa-check text-toth-gold"></i> Descontos
+                  cumulativos (quanto mais dependentes)
+                </li>
+                <li class="flex items-center gap-3 text-gray-700">
+                  <i class="fa-solid fa-check text-toth-gold"></i> Pediatria e
+                  ampla rede infantil
+                </li>
+              </ul>
+              <a
+                href="https://wa.me/5541997127102?text=Gostaria%20de%20uma%20cotação%20de%20Plano%20Familiar"
+                class="block w-full text-center py-3 border-2 border-toth-dark text-toth-dark font-bold rounded-xl hover:bg-toth-dark hover:text-toth-gold transition duration-300"
+              >
+                Cotar Familiar
+              </a>
+            </div>
+          </div>
+
+          <!-- Card: Empresarial -->
+          <div
+            class="bg-toth-dark rounded-3xl overflow-hidden shadow-2xl plan-card relative"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-toth-gold opacity-10 rounded-bl-full"
+            ></div>
+            <div class="h-56 overflow-hidden relative group">
+              <img
+                src="/images/saude_empresa.png"
+                alt="Plano de Saúde Empresarial"
+                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-500"
+              />
+            </div>
+            <div class="p-8 relative z-10">
+              <h3 class="text-2xl font-bold text-white mb-2">
+                Plano Empresarial (PME)
+              </h3>
+              <p class="text-gray-400 mb-6 text-sm">
+                Disponível para portadores de CNPJ e MEI, a partir de 2 ou 3
+                vidas.
+              </p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center gap-3 text-gray-300">
+                  <i class="fa-solid fa-check text-toth-gold"></i>
+                  <strong>Até 30% mais barato</strong> que a pessoa física
+                </li>
+                <li class="flex items-center gap-3 text-gray-300">
+                  <i class="fa-solid fa-check text-toth-gold"></i> Redução
+                  drástica nas Carências
+                </li>
+                <li class="flex items-center gap-3 text-gray-300">
+                  <i class="fa-solid fa-check text-toth-gold"></i> Retenção de
+                  Talentos (Benefício de RH)
+                </li>
+              </ul>
+              <a
+                href="https://wa.me/5541997127102?text=Gostaria%20de%20uma%20cotação%20de%20Plano%20Empresarial%20PME"
+                class="block w-full text-center py-3 bg-toth-gold text-toth-dark font-bold rounded-xl hover:bg-[#d4b363] transition duration-300 shadow-lg shadow-toth-gold/20"
+              >
+                Cotar pelo CNPJ
+              </a>
+            </div>
+          </div>
+
+          <!-- Card: Senior -->
+          <div
+            class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 plan-card"
+          >
+            <div class="h-56 overflow-hidden relative">
+              <img
+                src="/images/saude_idosos.png"
+                alt="Plano de Saúde Senior"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Plano Sênior (+60)
+              </h3>
+              <p class="text-gray-500 mb-6 text-sm">
+                Programas especializados para a melhor idade, com foco total em
+                medicina preventiva.
+              </p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-center gap-3 text-gray-700">
+                  <i class="fa-solid fa-check text-toth-gold"></i> Clínicas
+                  preparadas para geriatria
+                </li>
+                <li class="flex items-center gap-3 text-gray-700">
+                  <i class="fa-solid fa-check text-toth-gold"></i> Foco na
+                  prevenção acompanhada contínua
+                </li>
+                <li class="flex items-center gap-3 text-gray-700">
+                  <i class="fa-solid fa-check text-toth-gold"></i> Linhas
+                  exclusivas com custo otimizado
+                </li>
+              </ul>
+              <a
+                href="https://wa.me/5541997127102?text=Gostaria%20de%20uma%20cotação%20para%20Plano%20Sênior"
+                class="block w-full text-center py-3 border-2 border-toth-dark text-toth-dark font-bold rounded-xl hover:bg-toth-dark hover:text-toth-gold transition duration-300"
+              >
+                Cotar Plano Sênior
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 4. OPERADORAS PARCEIRAS ====== -->
+    <section class="py-16 bg-white border-y border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3
+          class="text-sm font-bold tracking-widest text-gray-400 uppercase mb-8"
+        >
+          Trabalhamos com as Maiores Operadoras do Brasil
+        </h3>
+        <div
+          class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 px-4"
+        >
+          <!-- Unimed -->
+          <h4
+            class="text-2xl font-black tracking-tight partner-logo-text brand-unimed cursor-default"
+            title="Unimed"
+          >
+            UNIMED
+          </h4>
+          <!-- Bradesco -->
+          <h4
+            class="text-2xl font-black tracking-tighter partner-logo-text brand-bradesco cursor-default"
+            title="Bradesco Saúde"
+          >
+            BRADESCO SAÚDE
+          </h4>
+          <!-- SulAmérica -->
+          <h4
+            class="text-3xl font-light tracking-wide partner-logo-text brand-sulamerica cursor-default flex items-center gap-1"
+            title="SulAmérica"
+          >
+            <span class="font-bold">Sul</span>América
+          </h4>
+          <!-- Amil -->
+          <h4
+            class="text-3xl font-extrabold tracking-tight partner-logo-text brand-amil cursor-default lowercase"
+            title="Amil"
+          >
+            amil
+          </h4>
+          <!-- GNDI/Hapvida -->
+          <h4
+            class="text-xl font-black tracking-tight partner-logo-text brand-gndi cursor-default"
+            title="Hapvida NotreDame"
+          >
+            NOTREDAME INTERMÉDICA
+          </h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 5. O DIFERENCIAL DA TOTH ====== -->
+    <section class="py-20 relative bg-toth-dark text-white overflow-hidden">
+      <!-- Decorativos de Fundo -->
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-toth-gold opacity-[0.03] rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-96 h-96 bg-toth-gold opacity-[0.03] rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+              Por que cotar seu plano de saúde com a
+              <span class="text-toth-gold">Toth Seguros?</span>
+            </h2>
+            <div class="gold-divider mb-8"></div>
+            <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+              O preenchimento de propostas de saúde envolve muitas minúcias de
+              regras (CNPJ x Adesão, Cobertura Regional x Nacional, Carências).
+              Um erro de preenchimento pode causar dores de cabeça incalculáveis
+              no hospital.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex gap-4 items-start">
+                <div class="mt-1 bg-toth-gold/20 p-2 rounded-lg text-toth-gold">
+                  <i class="fa-solid fa-scale-unbalanced text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold">Consultoria Isenta</h4>
+                  <p class="text-gray-400">
+                    Não "empurramos" uma operadora específica. Cotamos todas e
+                    mapeamos a melhor relação de Hospitais disponíveis no seu
+                    bairro contra o valor mensal que você quer atingir.
+                  </p>
+                </div>
+              </li>
+              <li class="flex gap-4 items-start">
+                <div class="mt-1 bg-toth-gold/20 p-2 rounded-lg text-toth-gold">
+                  <i class="fa-solid fa-headset text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold">Resgate Real de Carências</h4>
+                  <p class="text-gray-400">
+                    Se você já tem um plano há mais de 2 anos, conduzimos todo o
+                    rito da PORTABILIDADE legal para que você vá para as
+                    empresas de ponta sem sofrer novamente pelas filas de
+                    espera.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:w-1/2 w-full">
+            <div
+              class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur text-center"
+            >
+              <i class="fa-brands fa-whatsapp text-5xl text-toth-gold mb-6"></i>
+              <h3 class="text-2xl font-bold text-white mb-4">
+                Plantão de Consultoria
+              </h3>
+              <p class="text-gray-400 mb-8">
+                Nossos consultores estão online agora para montar uma
+                apresentação personalizada via WhatsApp. Diga-nos quantas
+                pessoas estarão no contrato e nós enviamos os relatórios de
+                valores de todas as marcas instantaneamente.
+              </p>
+              <a
+                href="https://wa.me/5541997127102?text=Olá,%20li%20o%20site%20e%20quero%20um%20estudo%20de%20plano%20de%20saúde."
+                target="_blank"
+                class="block w-full py-4 bg-toth-gold text-toth-dark font-extrabold rounded-xl hover:bg-white hover:scale-105 transition duration-300"
+              >
+                Iniciar Conversa Gratuita
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 6. FAQ (PERGUNTAS FREQUENTES) ====== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-toth-dark mb-4">
+            Restou alguma dúvida?
+          </h2>
+          <div class="gold-divider mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 toth-accordion">
+          <details>
+            <summary>
+              Como funcionam as Carências?
+              <i class="fa fa-chevron-down chevron text-toth-gold text-xs"></i>
+            </summary>
+            <div class="panel-body">
+              A ANS estipula limites máximos. Em geral: Urgência/Emergência
+              (24h), Consultas/Exames Simples (30 dias), Cirurgias e Internações
+              (180 dias), Parto (300 dias) e Doenças Preexistentes (24 meses).
+              Para planos empresariais (+30 vidas) ou compra de
+              carências/portabilidade, esses prazos podem ser mitigados ou
+              anulados.
+            </div>
+          </details>
+          <details>
+            <summary>
+              O que significa Coparticipação?
+              <i class="fa fa-chevron-down chevron text-toth-gold text-xs"></i>
+            </summary>
+            <div class="panel-body">
+              Nos planos Coparticipativos, a sua mensalidade fixa é absurdamente
+              mais barata. O detalhe é que sempre que você realiza uma consulta
+              ou pequeno exame, uma pequena taxa (previamente definda,
+              geralmente algo entre 20 a 40 reais) é cobrada do seu boleto no
+              mês seguinte. É a melhor modalidade para usuários que raramente
+              adoecem!
+            </div>
+          </details>
+          <details>
+            <summary>
+              Apenas PMEs podem ter o plano Empresarial?
+              <i class="fa fa-chevron-down chevron text-toth-gold text-xs"></i>
+            </summary>
+            <div class="panel-body">
+              A excelente notícia é que portadores de **MEI (Microempreendedor
+              Individual)** também ganham o direito aos benefícios da tabela
+              jurídica! É preciso ter o CNPJ ativo há pelo menos 6 meses e
+              incluir pelo menos um ou dois dependentes (cônjuge/filhos).
+              Converse com a gente para mais detalhes.
+            </div>
+          </details>
+          <details>
+            <summary>
+              Qual a diferença de quarto Enfermaria ou Apartamento?
+              <i class="fa fa-chevron-down chevron text-toth-gold text-xs"></i>
+            </summary>
+            <div class="panel-body">
+              A Enfermaria é um quarto coletivo acomodando de 2 a 4 pessoas, com
+              horários estritos de visitas e limitação de acompanhantes
+              contínuos. O Apartamento ou Quarto Privativo entrega total
+              privacidade, além da presença e pernoite do seu acompanhante
+              preferido a qualquer instante, sem estresse.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <toth-footer base="/" class="block"></toth-footer>
+
+    <script src="/components.js"></script>
+    <script>
+      document.querySelectorAll(".toth-accordion details").forEach((d) => {
+        d.addEventListener("toggle", () => {
+          if (d.open) {
+            document
+              .querySelectorAll(".toth-accordion details")
+              .forEach((other) => {
+                if (other !== d) other.open = false;
+              });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

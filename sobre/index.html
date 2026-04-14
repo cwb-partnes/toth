@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre a Toth | Toth Corretora de Seguros</title>
+    <meta
+      name="description"
+      content="Conheça a Toth Corretora de Seguros. Nossa história, valores, missão e a equipe dedicada a proteger você e sua família em Curitiba, PR."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { "toth-gold": "#c29b3a", "toth-dark": "#040404" },
+            fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+
+    <!-- Font Awesome & Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+
+    <!-- Shared components styles referenced in components.js -->
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* -------- PAGE HERO -------- */
+      .page-hero {
+        background:
+          linear-gradient(
+            135deg,
+            rgba(4, 4, 4, 0.6) 0%,
+            rgba(26, 26, 26, 0.6) 60%,
+            rgba(4, 4, 4, 0.6) 100%
+          ),
+          url("/images/hero_sobre_bg.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        overflow: hidden;
+      }
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 70% 50%,
+          rgba(194, 155, 58, 0.15) 0%,
+          transparent 70%
+        );
+      }
+
+      /* -------- ACCORDION -------- */
+      .toth-accordion summary {
+        list-style: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.25rem;
+        border-radius: 0.75rem;
+        background: #f9f9f9;
+        font-weight: 600;
+        color: #1a1a1a;
+        transition: all 0.25s;
+        user-select: none;
+      }
+      .toth-accordion summary::-webkit-details-marker {
+        display: none;
+      }
+      .toth-accordion details[open] summary {
+        color: #c29b3a;
+        background: rgba(194, 155, 58, 0.06);
+        border-radius: 0.75rem 0.75rem 0 0;
+      }
+      .toth-accordion summary .chevron {
+        transition: transform 0.3s;
+      }
+      .toth-accordion details[open] summary .chevron {
+        transform: rotate(180deg);
+      }
+      .toth-accordion .panel-body {
+        background: rgba(194, 155, 58, 0.04);
+        border: 1px solid rgba(194, 155, 58, 0.15);
+        border-top: none;
+        border-radius: 0 0 0.75rem 0.75rem;
+        padding: 1rem 1.25rem;
+        color: #555;
+        font-size: 0.94rem;
+        line-height: 1.7;
+      }
+
+      /* -------- STATS -------- */
+      .stat-card {
+        transition:
+          transform 0.35s,
+          box-shadow 0.35s;
+      }
+      .stat-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(194, 155, 58, 0.15);
+      }
+
+      /* -------- TIMELINE -------- */
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -33px;
+        top: 6px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #c29b3a;
+        border: 3px solid white;
+        box-shadow: 0 0 0 2px #c29b3a;
+      }
+
+      /* -------- VALUE CARDS -------- */
+      .value-card {
+        transition: all 0.35s;
+      }
+      .value-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        border-top-color: #c29b3a;
+      }
+
+      /* -------- DIVIDER -------- */
+      .gold-divider {
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #c29b3a, #d4b363);
+        border-radius: 9999px;
+      }
+
+      /* -------- WHATSAPP FLOAT -------- */
+      .wa-float {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 999;
+        background: #25d366;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .wa-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- WhatsApp Float -->
+    <a
+      href="https://wa.me/5541997127102?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20seguros%20da%20Toth%20Corretora."
+      target="_blank"
+      class="wa-float"
+    >
+      <i class="fa-brands fa-whatsapp text-2xl text-white"></i>
+    </a>
+
+    <!-- ====== SHARED NAVBAR ====== -->
+    <toth-navbar active="sobre" base="/"></toth-navbar>
+
+    <!-- ====== PAGE HERO ====== -->
+    <section class="page-hero py-20">
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
+        <span
+          class="inline-block bg-toth-gold/10 border border-toth-gold/30 text-toth-gold text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4"
+          >Sobre Nós</span
+        >
+        <h1
+          class="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-4"
+        >
+          Toth Corretora de Seguros
+        </h1>
+        <p class="text-gray-400 max-w-xl mx-auto text-lg">
+          Segurança, confiança e soluções personalizadas para proteger o que
+          realmente importa.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== QUEM SOMOS ====== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          <!-- Texto -->
+          <div>
+            <span
+              class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+              >Nossa Empresa</span
+            >
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-toth-dark mt-2 mb-4 leading-tight"
+            >
+              Atendimento especializado<br />
+              <span class="text-toth-gold">e suporte dedicado</span>
+            </h2>
+            <div class="gold-divider mb-6"></div>
+            <p class="text-gray-600 leading-relaxed mb-8">
+              Na Toth Corretora de Seguros, você conta com um atendimento
+              realmente próximo e especializado, pensado para entender suas
+              necessidades e indicar as melhores soluções do mercado. Estamos em
+              Curitiba, PR, atendendo clientes de todo o Brasil.
+            </p>
+
+            <!-- Accordion -->
+            <div class="toth-accordion space-y-3">
+              <details open>
+                <summary>
+                  <span class="flex items-center gap-3">
+                    <span
+                      class="w-8 h-8 bg-toth-gold/10 rounded-lg flex items-center justify-center"
+                      ><i class="fa fa-star text-toth-gold text-xs"></i
+                    ></span>
+                    Nossos valores
+                  </span>
+                  <i
+                    class="fa fa-chevron-down chevron text-toth-gold text-xs"
+                  ></i>
+                </summary>
+                <div class="panel-body">
+                  Ética, transparência e compromisso são os pilares da Toth
+                  Corretora. Atuamos com total honestidade para garantir a
+                  proteção dos nossos clientes em cada etapa do processo de
+                  seguro.
+                </div>
+              </details>
+              <details>
+                <summary>
+                  <span class="flex items-center gap-3">
+                    <span
+                      class="w-8 h-8 bg-toth-gold/10 rounded-lg flex items-center justify-center"
+                      ><i class="fa fa-users text-toth-gold text-xs"></i
+                    ></span>
+                    Nossa equipe
+                  </span>
+                  <i
+                    class="fa fa-chevron-down chevron text-toth-gold text-xs"
+                  ></i>
+                </summary>
+                <div class="panel-body">
+                  Profissionais qualificados, com ampla experiência no mercado
+                  de seguros, prontos para analisar seu perfil e indicar a
+                  solução mais adequada para você e sua família.
+                </div>
+              </details>
+              <details>
+                <summary>
+                  <span class="flex items-center gap-3">
+                    <span
+                      class="w-8 h-8 bg-toth-gold/10 rounded-lg flex items-center justify-center"
+                      ><i class="fa fa-bullseye text-toth-gold text-xs"></i
+                    ></span>
+                    Nossa missão
+                  </span>
+                  <i
+                    class="fa fa-chevron-down chevron text-toth-gold text-xs"
+                  ></i>
+                </summary>
+                <div class="panel-body">
+                  Oferecer segurança, tranquilidade e confiança com atendimento
+                  próximo e soluções feitas sob medida. Acreditamos que cada
+                  cliente merece proteção personalizada.
+                </div>
+              </details>
+            </div>
+
+            <div class="mt-8">
+              <a
+                href="https://wa.me/5541997127102"
+                target="_blank"
+                class="btn-gold inline-flex items-center text-white px-7 py-3.5 rounded-full font-semibold shadow-lg"
+              >
+                <i class="fa-brands fa-whatsapp mr-2 text-lg"></i>Falar com um
+                Especialista
+              </a>
+            </div>
+          </div>
+
+          <!-- Imagem -->
+          <div class="flex justify-center">
+            <div class="relative">
+              <div
+                class="absolute -inset-4 bg-gradient-to-tr from-toth-gold/20 to-transparent rounded-3xl blur-xl"
+              ></div>
+              <img
+                src="/images/empresario.png"
+                alt="Especialista Toth Seguros"
+                class="relative w-72 sm:w-96 object-contain drop-shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== NÚMEROS ====== -->
+    <section
+      class="py-16 bg-gradient-to-br from-toth-dark via-gray-900 to-toth-dark"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div
+            class="stat-card bg-white/5 border border-white/10 rounded-2xl p-8"
+          >
+            <div class="text-4xl font-extrabold text-toth-gold mb-2">+10</div>
+            <div class="text-gray-400 text-sm font-medium">
+              Anos de Experiência
+            </div>
+          </div>
+          <div
+            class="stat-card bg-white/5 border border-white/10 rounded-2xl p-8"
+          >
+            <div class="text-4xl font-extrabold text-toth-gold mb-2">+500</div>
+            <div class="text-gray-400 text-sm font-medium">
+              Clientes Protegidos
+            </div>
+          </div>
+          <div
+            class="stat-card bg-white/5 border border-white/10 rounded-2xl p-8"
+          >
+            <div class="text-4xl font-extrabold text-toth-gold mb-2">15+</div>
+            <div class="text-gray-400 text-sm font-medium">
+              Seguradoras Parceiras
+            </div>
+          </div>
+          <div
+            class="stat-card bg-white/5 border border-white/10 rounded-2xl p-8"
+          >
+            <div class="text-4xl font-extrabold text-toth-gold mb-2">98%</div>
+            <div class="text-gray-400 text-sm font-medium">
+              Satisfação dos Clientes
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== MANIFESTO ====== -->
+    <section class="py-24 relative overflow-hidden bg-[#040404]">
+      <!-- Background sutil -->
+      <div
+        class="absolute inset-0 opacity-20"
+        style="
+          background: radial-gradient(
+            circle at 50% 50%,
+            #c29b3a 0%,
+            transparent 60%
+          );
+        "
+      ></div>
+
+      <div
+        class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
+        <i class="fa fa-quote-left text-toth-gold text-4xl mb-6 opacity-80"></i>
+        <h2
+          class="text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-relaxed mb-8"
+        >
+          "Mais do que apólices, entregamos
+          <span class="text-toth-gold font-bold">tranquilidade</span>. O nosso
+          compromisso é ser o porto seguro da sua família e o alicerce do seu
+          negócio."
+        </h2>
+        <div class="w-24 h-1 bg-toth-gold mx-auto rounded-full mb-6"></div>
+        <p class="text-toth-gold uppercase tracking-widest text-sm font-bold">
+          A Diretoria — Toth Corretora
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== NOSSOS VALORES ====== -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span
+            class="text-toth-gold text-xs font-bold tracking-widest uppercase"
+            >O Que Nos Move</span
+          >
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-toth-dark mt-2">
+            Pilares da Toth Corretora
+          </h2>
+          <div class="gold-divider mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="value-card bg-white border-t-4 border-transparent rounded-2xl p-8 shadow-sm"
+          >
+            <div
+              class="w-14 h-14 bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-5"
+            >
+              <i class="fa fa-shield-halved text-2xl text-toth-gold"></i>
+            </div>
+            <h3 class="text-xl font-bold text-toth-dark mb-3">Proteção Real</h3>
+            <p class="text-gray-500 leading-relaxed text-sm">
+              Analisamos cada cenário com cuidado para garantir que você e sua
+              família estejam protegidos frente às mais diversas situações.
+            </p>
+          </div>
+          <div
+            class="value-card bg-white border-t-4 border-transparent rounded-2xl p-8 shadow-sm"
+          >
+            <div
+              class="w-14 h-14 bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-5"
+            >
+              <i class="fa fa-handshake text-2xl text-toth-gold"></i>
+            </div>
+            <h3 class="text-xl font-bold text-toth-dark mb-3">Transparência</h3>
+            <p class="text-gray-500 leading-relaxed text-sm">
+              Todas as condições, coberturas e exclusões são explicadas com
+              clareza antes da contratação. Sem letras miúdas escondidas.
+            </p>
+          </div>
+          <div
+            class="value-card bg-white border-t-4 border-transparent rounded-2xl p-8 shadow-sm"
+          >
+            <div
+              class="w-14 h-14 bg-toth-gold/10 rounded-2xl flex items-center justify-center mb-5"
+            >
+              <i class="fa fa-headset text-2xl text-toth-gold"></i>
+            </div>
+            <h3 class="text-xl font-bold text-toth-dark mb-3">
+              Suporte Contínuo
+            </h3>
+            <p class="text-gray-500 leading-relaxed text-sm">
+              Estamos ao seu lado não só na contratação, mas também nos momentos
+              de sinistro, renovação e dúvidas do dia a dia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTATO RÁPIDO ====== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-toth-dark">
+            Fale com a Toth Corretora
+          </h2>
+          <div class="gold-divider mx-auto mt-4"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Telefone -->
+          <div
+            class="contact-card text-center bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-16 h-16 bg-toth-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-5"
+            >
+              <i class="fa fa-phone text-2xl text-toth-gold"></i>
+            </div>
+            <h3 class="text-lg font-bold text-toth-dark mb-3">
+              Telefone & WhatsApp
+            </h3>
+            <a
+              href="tel:4132055486"
+              class="block text-gray-600 hover:text-toth-gold transition font-medium"
+              >(41) 3205-5486</a
+            >
+            <a
+              href="https://wa.me/5541997127102"
+              target="_blank"
+              class="block text-toth-gold hover:text-toth-dark transition font-semibold mt-1"
+              >(41) 99712-7102</a
+            >
+          </div>
+          <!-- Email -->
+          <div
+            class="contact-card text-center bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-16 h-16 bg-toth-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-5"
+            >
+              <i class="fa fa-envelope text-2xl text-toth-gold"></i>
+            </div>
+            <h3 class="text-lg font-bold text-toth-dark mb-3">E-mail</h3>
+            <a
+              href="mailto:atendimento@tothcorretoradeseguros.com.br"
+              class="text-gray-600 hover:text-toth-gold transition text-sm break-all"
+            >
+              atendimento@tothcorretoradeseguros.com.br
+            </a>
+          </div>
+          <!-- Horário -->
+          <div
+            class="contact-card text-center bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-toth-gold/30 transition-all"
+          >
+            <div
+              class="w-16 h-16 bg-toth-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-5"
+            >
+              <i class="fa fa-clock text-2xl text-toth-gold"></i>
+            </div>
+            <h3 class="text-lg font-bold text-toth-dark mb-3">
+              Horário de Atendimento
+            </h3>
+            <p class="text-gray-600 font-medium">Segunda a Sexta</p>
+            <p class="text-toth-gold font-bold text-lg">08:00 às 18:00</p>
+            <p class="text-gray-400 text-xs mt-1">
+              <i class="fa fa-location-dot mr-1"></i>Curitiba, PR
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div
+          class="mt-14 bg-gradient-to-r from-toth-dark to-gray-900 rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+              Pronto para se proteger?
+            </h3>
+            <p class="text-gray-400 mt-1">
+              Solicite uma cotação gratuita hoje mesmo.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/5541997127102?text=Quero%20solicitar%20uma%20cotação"
+            target="_blank"
+            class="btn-gold text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl flex items-center gap-3 whitespace-nowrap"
+          >
+            <i class="fa-brands fa-whatsapp text-xl"></i>Solicitar Cotação
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SHARED FOOTER ====== -->
+    <toth-footer base="/"></toth-footer>
+
+    <!-- ==== Shared Components ==== -->
+    <script src="/components.js"></script>
+
+    <!-- Accordion: prevent default link behavior -->
+    <script>
+      document.querySelectorAll(".toth-accordion details").forEach((d) => {
+        d.addEventListener("toggle", () => {
+          if (d.open) {
+            document
+              .querySelectorAll(".toth-accordion details")
+              .forEach((other) => {
+                if (other !== d) other.open = false;
+              });
+          }
+        });
+      });
+    </script>
+
+    <!-- Contact card hover class (from style.css shared) -->
+    <style>
+      .contact-card {
+        transition: transform 0.3s;
+      }
+      .contact-card:hover {
+        transform: translateY(-4px);
+      }
+      .btn-gold {
+        background: linear-gradient(135deg, #c29b3a 0%, #b0892b 100%);
+        transition: all 0.3s ease;
+      }
+      .btn-gold:hover {
+        box-shadow: 0 12px 24px -8px rgba(194, 155, 58, 0.6);
+        transform: translateY(-2px);
+      }
+    </style>
+  </body>
+</html>

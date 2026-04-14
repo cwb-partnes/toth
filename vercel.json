@@ -1,0 +1,166 @@
+{
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/pages/index.php/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/index.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-auto.php/index.html",
+      "destination": "/seguro-auto",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-auto.php",
+      "destination": "/seguro-auto",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-residencial.php/index.html",
+      "destination": "/seguro-residencial",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-residencial.php",
+      "destination": "/seguro-residencial",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-de-vida.php/index.html",
+      "destination": "/seguro-de-vida",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-de-vida.php",
+      "destination": "/seguro-de-vida",
+      "permanent": true
+    },
+    {
+      "source": "/pages/plano-de-saude.php/index.html",
+      "destination": "/plano-de-saude",
+      "permanent": true
+    },
+    {
+      "source": "/pages/plano-de-saude.php",
+      "destination": "/plano-de-saude",
+      "permanent": true
+    },
+    {
+      "source": "/pages/planos-de-saude.php/index.html",
+      "destination": "/plano-de-saude",
+      "permanent": true
+    },
+    {
+      "source": "/pages/planos-de-saude.php",
+      "destination": "/plano-de-saude",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-equipamentos.php/index.html",
+      "destination": "/seguro-equipamentos",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-equipamentos.php",
+      "destination": "/seguro-equipamentos",
+      "permanent": true
+    },
+    {
+      "source": "/pages/consorcios.php/index.html",
+      "destination": "/consorcios",
+      "permanent": true
+    },
+    {
+      "source": "/pages/consorcios.php",
+      "destination": "/consorcios",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-empresarial.php/index.html",
+      "destination": "/seguro-empresarial",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-empresarial.php",
+      "destination": "/seguro-empresarial",
+      "permanent": true
+    },
+    {
+      "source": "/pages/responsabilidade-civil.php/index.html",
+      "destination": "/responsabilidade-civil",
+      "permanent": true
+    },
+    {
+      "source": "/pages/responsabilidade-civil.php",
+      "destination": "/responsabilidade-civil",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-de-pessoas.php/index.html",
+      "destination": "/seguro-de-pessoas",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-de-pessoas.php",
+      "destination": "/seguro-de-pessoas",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-de-danos-patrimoniais.php/index.html",
+      "destination": "/seguro-de-danos-patrimoniais",
+      "permanent": true
+    },
+    {
+      "source": "/pages/seguro-de-danos-patrimoniais.php",
+      "destination": "/seguro-de-danos-patrimoniais",
+      "permanent": true
+    },
+    {
+      "source": "/pages/contato.php/index.html",
+      "destination": "/contato",
+      "permanent": true
+    },
+    {
+      "source": "/pages/contato.php",
+      "destination": "/contato",
+      "permanent": true
+    },
+    {
+      "source": "/pages/parceiros.php/index.html",
+      "destination": "/parceiros",
+      "permanent": true
+    },
+    {
+      "source": "/pages/parceiros.php",
+      "destination": "/parceiros",
+      "permanent": true
+    },
+    {
+      "source": "/pages/sobre.php/index.html",
+      "destination": "/sobre",
+      "permanent": true
+    },
+    {
+      "source": "/pages/sobre.php",
+      "destination": "/sobre",
+      "permanent": true
+    },
+    {
+      "source": "/landing-consorcio.html",
+      "destination": "/landing-consorcio",
+      "permanent": true
+    },
+    {
+      "source": "/landing-saude.html",
+      "destination": "/landing-saude",
+      "permanent": true
+    }
+  ]
+}
